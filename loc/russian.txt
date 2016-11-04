@@ -1,0 +1,18 @@
+{
+    "WaveSurvived_compatibility_title" : "Опции Пройденных Волн",
+    "WaveSurvived_compatibility_desc" : "Изменить совместимость с Пройденными Волнами",
+    "WaveSurvived_item_title" : "Совместимость мода",
+    "WaveSurvived_item_desc" : "Вам нужно изменить совместимость мода, если вы используете модифицированный интерфейс. В противном случае, игра вылетит. Перезапустите игру, чтобы изменения вступили в силу.",
+
+    "WaveSurvived_language_title" : "Язык",
+    "WaveSurvived_language_desc" : "Измените язык мода - Перезапустите игру, чтобы изменения вступили в силу.",
+    "WaveSurvived_language_english" : "Английский",
+    "WaveSurvived_language_french" : "Французский",
+	"WaveSurvived_language_russian" : "Русский",
+	
+
+    "WaveSurvived_no_hud" : "Без модифицированного интерфейса",
+    "WaveSurvived_holoui" : "HoloUI",
+    "WaveSurvived_restoration" : "Restoration Mod"
+    "WaveSurvived_pdthhud" : "PDTH Hud"
+}
