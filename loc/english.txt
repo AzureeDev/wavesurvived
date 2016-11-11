@@ -13,5 +13,6 @@
     "WaveSurvived_no_hud" : "No custom HUD",
     "WaveSurvived_holoui" : "HoloUI",
     "WaveSurvived_restoration" : "Restoration Mod",
-    "WaveSurvived_pdthhud" : "PDTH Hud"
+    "WaveSurvived_pdthhud" : "PDTH Hud",
+    "WaveSurvived_lddghud" : "LDDG Hud"
 }

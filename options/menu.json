@@ -27,7 +27,8 @@
 			"items" : [
 				"WaveSurvived_no_hud",
 				"WaveSurvived_holoui",
-				"WaveSurvived_pdthhud"
+				"WaveSurvived_pdthhud",
+				"WaveSurvived_lddghud"
 			],
 			"value" : "WaveSurvived_compatibility",
 			"default_value" : 1,

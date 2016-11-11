@@ -74,14 +74,24 @@ if not Utils:IsInGameState() then
 
 			elseif WaveSurvived.options.id_hud == 3 then
 
-			WaveSurvived.options = {
-			compatibility = "pdthhud",
-			language = WaveSurvived.options["language"]
+				WaveSurvived.options = {
+				compatibility = "pdthhud",
+				language = WaveSurvived.options["language"]
 			}
-			
+
 			WaveSurvived:Save()
+
+			elseif WaveSurvived.options.id_hud == 4 then
+
+				WaveSurvived.options = {
+				compatibility = "lddghud",
+				language = WaveSurvived.options["language"]
+				}
+				
+				WaveSurvived:Save()
+			
 			end
-		end
+	end
 
 		MenuCallbackHandler.WaveSurvived_language_callback = function(this, item)
 			
@@ -108,10 +118,10 @@ if not Utils:IsInGameState() then
 
 			elseif WaveSurvived.options.language_hud == 3 then
 
-			WaveSurvived.options = {
-			compatibility = WaveSurvived.options["compatibility"],
-			language = "russian"
-			}
+				WaveSurvived.options = {
+				compatibility = WaveSurvived.options["compatibility"],
+				language = "russian"
+				}
 
 			WaveSurvived:Save()
 			end
@@ -142,11 +152,10 @@ if not Utils:IsInGameState() then
 
 	else -- if nothing match, loads the default localization
 
-	Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
-		loc:load_localization_file( WaveSurvived.locfile_english )
-	end)
-	log("[WaveSurvived] Localization [ENGLISH] loaded")
-
+		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
+			loc:load_localization_file( WaveSurvived.locfile_english )
+		end)
+		log("[WaveSurvived] Localization [ENGLISH] loaded")
 
 	end
 

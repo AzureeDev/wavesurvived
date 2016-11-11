@@ -81,12 +81,21 @@ if MenuManager then
 
 		elseif WaveSurvived.options.id_hud == 3 then
 
-		WaveSurvived.options = {
-		compatibility = "pdthhud",
-		language = WaveSurvived.options["language"]
-		}
-		
-		WaveSurvived:Save()
+			WaveSurvived.options = {
+			compatibility = "pdthhud",
+			language = WaveSurvived.options["language"]
+			}
+			
+			WaveSurvived:Save()
+
+		elseif WaveSurvived.options.id_hud == 4 then
+
+			WaveSurvived.options = {
+			compatibility = "lddghud",
+			language = WaveSurvived.options["language"]
+			}
+			
+			WaveSurvived:Save()
 		end
 	end
 
@@ -115,10 +124,10 @@ if MenuManager then
 
 		elseif WaveSurvived.options.language_hud == 3 then
 
-		WaveSurvived.options = {
-		compatibility = WaveSurvived.options["compatibility"],
-		language = "russian"
-		}
+			WaveSurvived.options = {
+			compatibility = WaveSurvived.options["compatibility"],
+			language = "russian"
+			}
 
 		WaveSurvived:Save()
 		end
@@ -147,6 +156,11 @@ elseif WaveSurvived.options["compatibility"] == "pdthhud" then
 	log("[WaveSurvived] Script based on : pdthhud")
 
 	WaveSurvived:LoadCustomScript("pdth_hud")
+
+elseif WaveSurvived.options["compatibility"] == "lddghud" then
+	log("[WaveSurvived] Script based on : lddghud")
+
+	WaveSurvived:LoadCustomScript("lddg_hud")
 	
 else -- If nothing is matching the condition, loads the default setup
 	log("[WaveSurvived] Not matching anything. Loads the default setup.")

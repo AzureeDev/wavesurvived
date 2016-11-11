@@ -1,5 +1,9 @@
-function HUDAssaultCorner:denied_garage_escape()
-	return managers.job:current_level_id() == "escape_garage"
+function HUDAssaultCorner:denied_escapes()
+	local f = string.find(managers.job:current_level_id(), "escape")
+
+	if f then
+		return true
+	end
 end
 
 function HUDAssaultCorner:_end_assault()
@@ -18,7 +22,7 @@ function HUDAssaultCorner:_end_assault()
  	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
  	icon_assaultbox:stop()
 
- 	if not self:denied_garage_escape() then
+ 	if not self:denied_escapes() then
  		log("[WaveSurvived] Condition OK")
 		self:_update_assault_hud_color(self._assault_survived_color)
 		self:_set_text_list(self:_get_survived_assault_strings())
@@ -27,5 +31,6 @@ function HUDAssaultCorner:_end_assault()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
 	else
 		log("Garage escape condition failed")
+		self:_close_assault_box()
 	end
 end
