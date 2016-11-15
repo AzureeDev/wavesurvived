@@ -33,6 +33,22 @@
 			],
 			"value" : "WaveSurvived_compatibility",
 			"default_value" : 1,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "WaveSurvived_duration_choice",
+			"title" : "WaveSurvived_duration_title",
+			"description" : "WaveSurvived_duration_desc",
+			"callback" : "WaveSurvived_duration_callback",
+			"items" : [
+				"WaveSurvived_duration_original",
+				"WaveSurvived_duration_15sec",
+				"WaveSurvived_duration_20sec",
+				"WaveSurvived_duration_25sec",
+				"WaveSurvived_duration_infinite"
+			],
+			"value" : "WaveSurvived_duration",
+			"default_value" : 1,
 		}
 	]
 }

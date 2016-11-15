@@ -61,15 +61,63 @@ function HUDAssaultCorner:animate_assault_in_progress(o)
 end
 
 function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
-	wait(20)
 	
-	local function close_done()
-		icon_assaultbox:stop()
-		icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
-		self:sync_set_assault_mode("normal")
+	if WaveSurvived.options["WaveSurvived_duration"] == 1 then
+		wait(8.6)
+		local function close_done()
+			icon_assaultbox:stop()
+			icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+			self:sync_set_assault_mode("normal")
+		end
+		self._survived = false
+		self._bg_box:stop()
+		self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+		self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
+	elseif WaveSurvived.options["WaveSurvived_duration"] == 2 then
+		wait(15)
+		local function close_done()
+			icon_assaultbox:stop()
+			icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+			self:sync_set_assault_mode("normal")
+		end
+		self._survived = false
+		self._bg_box:stop()
+		self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+		self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
+	elseif WaveSurvived.options["WaveSurvived_duration"] == 3 then
+		wait(20)
+		local function close_done()
+			icon_assaultbox:stop()
+			icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+			self:sync_set_assault_mode("normal")
+		end
+		self._survived = false
+		self._bg_box:stop()
+		self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+		self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
+	elseif WaveSurvived.options["WaveSurvived_duration"] == 4 then
+		wait(25)
+		local function close_done()
+			icon_assaultbox:stop()
+			icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+			self:sync_set_assault_mode("normal")
+		end
+		self._survived = false
+		self._bg_box:stop()
+		self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+		self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
+	elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
+
+	else
+		wait(8.6)
+		local function close_done()
+			icon_assaultbox:stop()
+			icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+			self:sync_set_assault_mode("normal")
+		end
+		self._survived = false
+		self._bg_box:stop()
+		self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+		self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
 	end
-	self._survived = false
-	self._bg_box:stop()
-	self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
-	self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
 end

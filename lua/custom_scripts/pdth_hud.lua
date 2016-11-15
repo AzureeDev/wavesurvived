@@ -2,7 +2,6 @@ if pdth_hud then
 	log("[WaveSurvived] Loaded custom script pdth_hud.lua")
 
 	function HUDAssaultCorner:_start_assault()
-		log("[WaveSurvived] Assault Started")
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local control_assault_title = assault_panel:child("control_assault_title")
 		local icon_assaultbox = assault_panel:child("icon_assaultbox")
@@ -45,8 +44,6 @@ if pdth_hud then
 		end
 		self._assault = false
 
-		log("[WaveSurvived] Condition OK")
-
 		local const = pdth_hud.constants
 		control_assault_title:set_font_size(const.assault_font_size - 3.5)
 		control_assault_title:set_text("SURVIVED")
@@ -58,9 +55,31 @@ if pdth_hud then
 	end
 
 	function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
-		wait(20)
-		local assault_panel = self._hud_panel:child("assault_panel")
-		assault_panel:set_visible(false)
+		
+		if WaveSurvived.options["WaveSurvived_duration"] == 1 then
+			wait(8.6)
+			local assault_panel = self._hud_panel:child("assault_panel")
+			assault_panel:set_visible(false)
+		elseif WaveSurvived.options["WaveSurvived_duration"] == 2 then
+			wait(15)
+			local assault_panel = self._hud_panel:child("assault_panel")
+			assault_panel:set_visible(false)
+		elseif WaveSurvived.options["WaveSurvived_duration"] == 3 then
+			wait(20)
+			local assault_panel = self._hud_panel:child("assault_panel")
+			assault_panel:set_visible(false)
+		elseif WaveSurvived.options["WaveSurvived_duration"] == 4 then
+			wait(25)
+			local assault_panel = self._hud_panel:child("assault_panel")
+			assault_panel:set_visible(false)
+		elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
+
+		else
+			wait(8.6)
+			local assault_panel = self._hud_panel:child("assault_panel")
+			assault_panel:set_visible(false)
+		end
+
 	end
 
 end

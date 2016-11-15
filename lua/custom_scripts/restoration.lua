@@ -8,7 +8,6 @@ function HUDAssaultCorner:denied_escapes()
 end
 
 function HUDAssaultCorner:_start_assault(text_list)
-	log("[WaveSurvived] Assault Started")
 	if self._assault then
 	return end
 	text_list = text_list or {""}
