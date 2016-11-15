@@ -12,20 +12,15 @@ WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
 WaveSurvived.options = {}
 
 function WaveSurvived:Load()
-	if file.DirectoryExists( self.savepath ) then
-		if io.file_is_readable ( self.savefile ) then
-		
-			local file = io.open( self.savefile , "r")
-			if file then
-				for k, v in pairs(json.decode(file:read("*all")) or {}) do
-					if k then
-						WaveSurvived.options[k] = v
-					end
-				end
-				file:close()
-				log("[WaveSurvived] Loaded Settings")
+	local file = io.open( self.savefile , "r")
+	if file then
+		for k, v in pairs(json.decode(file:read("*all")) or {}) do
+			if k then
+				WaveSurvived.options[k] = v
 			end
 		end
+		file:close()
+		log("[WaveSurvived] Loaded Settings")
 	end
 end
 
@@ -41,7 +36,7 @@ function WaveSurvived:Save()
 end
 
 function WaveSurvived:LoadCustomScript(name)
-	return dofile(ModPath .. "/lua/custom_scripts/" .. name .. ".lua")
+	return dofile(ModPath .. "/custom_scripts/" .. name .. ".lua")
 end
 
 if not io.file_is_readable(WaveSurvived.savefile) then
@@ -96,6 +91,15 @@ if MenuManager then
 			}
 			
 			WaveSurvived:Save()
+
+		elseif WaveSurvived.options.id_hud == 5 then
+
+				WaveSurvived.options = {
+				compatibility = "restoration",
+				language = WaveSurvived.options["language"]
+				}
+				
+				WaveSurvived:Save()
 		end
 	end
 
@@ -161,6 +165,11 @@ elseif WaveSurvived.options["compatibility"] == "lddghud" then
 	log("[WaveSurvived] Script based on : lddghud")
 
 	WaveSurvived:LoadCustomScript("lddg_hud")
+
+elseif WaveSurvived.options["compatibility"] == "restoration" then
+	log("[WaveSurvived] Script based on : restoration")
+
+	WaveSurvived:LoadCustomScript("restoration")
 	
 else -- If nothing is matching the condition, loads the default setup
 	log("[WaveSurvived] Not matching anything. Loads the default setup.")

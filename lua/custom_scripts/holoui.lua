@@ -21,15 +21,20 @@ function HUDAssaultCorner:_end_assault()
  	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
  	icon_assaultbox:stop()
 
- 	if self:denied_escapes() then
- 		local color_green = Color(1, 0.1254902, 0.9019608, 0.1254902)
+ 	if not self:denied_escapes() then
  		log("[WaveSurvived] Condition OK")
 		self:_update_assault_hud_color(self._assault_survived_color)
 		self:_set_text_list(self:_get_survived_assault_strings())
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
+		box_text_panel:animate(callback(self, self, "_animate_wave_completed"), self)
 	else
 		log("Garage escape condition failed")
 	end
+end
+
+function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
+	wait(20)
+	self:_close_assault_box()
 end

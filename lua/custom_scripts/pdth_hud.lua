@@ -1,6 +1,7 @@
 if pdth_hud then
-	log("[WaveSurvived] Loaded custom script pdth_original.lua")
-	function HUDAssaultCorner:_start_assault(text_list)
+	log("[WaveSurvived] Loaded custom script pdth_hud.lua")
+
+	function HUDAssaultCorner:_start_assault()
 		log("[WaveSurvived] Assault Started")
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local control_assault_title = assault_panel:child("control_assault_title")
@@ -30,7 +31,6 @@ if pdth_hud then
 	end
 
 	function HUDAssaultCorner:_end_assault()
-					
 		local color = Color(1, 0.1254902, 0.9019608, 0.1254902)
 	    self._fx_color = color
 		self._current_assault_color = color
@@ -53,5 +53,14 @@ if pdth_hud then
 		control_assault_title:set_color(color)
 	    icon_assaultbox:set_color(color)
 		assault_panel:animate(callback(self, self, "flash_assault_title"), true)
+		assault_panel:animate(callback(self, self, "_animate_wave_completed"), self)
+
 	end
+
+	function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
+		wait(20)
+		local assault_panel = self._hud_panel:child("assault_panel")
+		assault_panel:set_visible(false)
+	end
+
 end

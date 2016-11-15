@@ -14,21 +14,16 @@ WaveSurvived.options = {
 	language = "english"
 }
 
-function WaveSurvived:Load()
-	if file.DirectoryExists( self.savepath ) then
-		if io.file_is_readable ( self.savefile ) then
-		
-			local file = io.open( self.savefile , "r")
-			if file then
-				for k, v in pairs(json.decode(file:read("*all")) or {}) do
-					if k then
-						WaveSurvived.options[k] = v
-					end
-				end
-				file:close()
-				log("[WaveSurvived] Loaded Settings")
+function WaveSurvived:Load()		
+	local file = io.open( self.savefile , "r")
+	if file then
+		for k, v in pairs(json.decode(file:read("*all")) or {}) do
+			if k then
+				WaveSurvived.options[k] = v
 			end
 		end
+		file:close()
+		log("[WaveSurvived] Loaded Settings")
 	end
 end
 
@@ -46,7 +41,6 @@ end
 if not Utils:IsInGameState() then
 	
 	if MenuManager then
-	WaveSurvived:Load()
 
 		MenuCallbackHandler.WaveSurvived_compatibility_callback = function(this, item)
 			
@@ -89,8 +83,19 @@ if not Utils:IsInGameState() then
 				}
 				
 				WaveSurvived:Save()
+
+			elseif WaveSurvived.options.id_hud == 5 then
+
+				WaveSurvived.options = {
+				compatibility = "restoration",
+				language = WaveSurvived.options["language"]
+				}
+				
+				WaveSurvived:Save()
 			
 			end
+
+			WaveSurvived:Load()
 	end
 
 		MenuCallbackHandler.WaveSurvived_language_callback = function(this, item)

@@ -16,7 +16,7 @@
 				"WaveSurvived_language_russian"
 			],
 			"value" : "WaveSurvived_language",
-			"default_value" : 1
+			"default_value" : 1,
 		},
 		{
 			"type" : "multiple_choice",
@@ -28,10 +28,11 @@
 				"WaveSurvived_no_hud",
 				"WaveSurvived_holoui",
 				"WaveSurvived_pdthhud",
-				"WaveSurvived_lddghud"
+				"WaveSurvived_lddghud",
+				"WaveSurvived_restoration"
 			],
 			"value" : "WaveSurvived_compatibility",
-			"default_value" : 1
+			"default_value" : 1,
 		}
 	]
 }

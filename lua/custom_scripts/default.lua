@@ -29,8 +29,25 @@ function HUDAssaultCorner:_end_assault()
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
+		box_text_panel:animate(callback(self, self, "_animate_wave_completed"), self)
 	else
 		log("Garage escape condition failed")
 		self:_close_assault_box()
+	end
+end
+
+function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
+	if not self:is_safehouse_raid() then
+		wait(20)
+		self:_close_assault_box()
+	else
+		local wave_text = panel:child("num_waves")
+		local bg = panel:child("bg")
+		wait(1.4)
+		wave_text:set_text(self:get_completed_waves_string())
+		bg:stop()
+		bg:animate(callback(nil, _G, "HUDBGBox_animate_bg_attention"), {})
+		wait(7.2)
+		assault_hud:_close_assault_box()
 	end
 end

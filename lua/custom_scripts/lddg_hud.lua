@@ -44,6 +44,7 @@ function HUDAssaultCorner:_end_assault()
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
 		icon_assaultbox:set_color( color_green )
+		self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)
 	end
 end
 
@@ -57,4 +58,18 @@ function HUDAssaultCorner:animate_assault_in_progress(o)
 		set_alpha(o, 1)
 	end
 	set_alpha(o, 0)
+end
+
+function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
+	wait(20)
+	
+	local function close_done()
+		icon_assaultbox:stop()
+		icon_assaultbox:animate(callback(self, self, "_hide_icon_assaultbox"))		
+		self:sync_set_assault_mode("normal")
+	end
+	self._survived = false
+	self._bg_box:stop()
+	self._hud_panel:child("assault_panel"):animate(callback(nil, _G, "set_alpha"), 0)	
+	self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_close_left"), close_done)
 end
