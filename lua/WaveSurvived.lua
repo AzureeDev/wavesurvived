@@ -55,6 +55,14 @@ MenuCallbackHandler.WaveSurvived_language_callback = function(self, item)
 	WaveSurvived:Save()
 end
 
+MenuCallbackHandler.WaveSurvived_duration_callback = function(self, item)
+		
+	WaveSurvived.options.WaveSurvived_duration = item:value()
+	log("[WaveSurvived] Duration : " .. WaveSurvived.options.WaveSurvived_duration)
+	WaveSurvived:Save()
+	
+end
+
 WaveSurvived:Load()
 
 if WaveSurvived.options["WaveSurvived_compatibility"] == 1 then
