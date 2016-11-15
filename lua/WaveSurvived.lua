@@ -1,4 +1,4 @@
-_G.WaveSurvived = {}
+WaveSurvived = {}
 
 WaveSurvived.modpath = ModPath
 WaveSurvived.logpath = LogsPath
@@ -39,134 +39,46 @@ function WaveSurvived:LoadCustomScript(name)
 	return dofile(ModPath .. "/custom_scripts/" .. name .. ".lua")
 end
 
-if not io.file_is_readable(WaveSurvived.savefile) then
+MenuCallbackHandler.WaveSurvived_compatibility_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_compatibility = item:value()
 
-	WaveSurvived.options = {
-		compatibility = "WaveSurvived_compatibility_nohud",
-		language = "english"
-	}
-
+	log("[WaveSurvived] Current HUD : " .. WaveSurvived.options.WaveSurvived_compatibility)
+	WaveSurvived:Save()
+	
 end
 
-if MenuManager then
-
-	MenuCallbackHandler.WaveSurvived_compatibility_callback = function(this, item)
-		
-		WaveSurvived.options.id_hud = tonumber(item:value()) 
-
-		log("[WaveSurvived] Current HUD : " .. WaveSurvived.options.id_hud)
-
-		if WaveSurvived.options.id_hud == 1 then
-
-			WaveSurvived.options = {
-			compatibility = "no_hud",
-			language = WaveSurvived.options["language"]
-			}
-
-			WaveSurvived:Save()
-
-		elseif WaveSurvived.options.id_hud == 2 then
-
-			WaveSurvived.options = {
-			compatibility = "holoui",
-			language = WaveSurvived.options["language"]
-			}
-			
-			WaveSurvived:Save()
-
-		elseif WaveSurvived.options.id_hud == 3 then
-
-			WaveSurvived.options = {
-			compatibility = "pdthhud",
-			language = WaveSurvived.options["language"]
-			}
-			
-			WaveSurvived:Save()
-
-		elseif WaveSurvived.options.id_hud == 4 then
-
-			WaveSurvived.options = {
-			compatibility = "lddghud",
-			language = WaveSurvived.options["language"]
-			}
-			
-			WaveSurvived:Save()
-
-		elseif WaveSurvived.options.id_hud == 5 then
-
-				WaveSurvived.options = {
-				compatibility = "restoration",
-				language = WaveSurvived.options["language"]
-				}
-				
-				WaveSurvived:Save()
-		end
-	end
-
-	MenuCallbackHandler.WaveSurvived_language_callback = function(this, item)
-		
-		WaveSurvived.options.language_hud = tonumber(item:value()) 
-		log("[WaveSurvived] Current language : " .. WaveSurvived.options.language_hud)
-
-		if WaveSurvived.options.language_hud == 1 then
-
-			WaveSurvived.options = {
-			compatibility = WaveSurvived.options["compatibility"],
-			language = "english"
-			}
-
-			WaveSurvived:Save()
-		
-		elseif WaveSurvived.options.language_hud == 2 then
-
-			WaveSurvived.options = {
-			compatibility = WaveSurvived.options["compatibility"],
-			language = "french"
-			}
-
-			WaveSurvived:Save()
-
-		elseif WaveSurvived.options.language_hud == 3 then
-
-			WaveSurvived.options = {
-			compatibility = WaveSurvived.options["compatibility"],
-			language = "russian"
-			}
-
-		WaveSurvived:Save()
-		end
-	end
-
-	WaveSurvived:Load()
+MenuCallbackHandler.WaveSurvived_language_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_language = item:value()
+	log("[WaveSurvived] Current language : " .. WaveSurvived.options.WaveSurvived_language)
+	WaveSurvived:Save()
 end
 
+WaveSurvived:Load()
 
-
-
-
-
-if WaveSurvived.options["compatibility"] == "no_hud" then
+if WaveSurvived.options["WaveSurvived_compatibility"] == 1 then
 
 	log("[WaveSurvived] Script based on: no_hud")
 
 	WaveSurvived:LoadCustomScript("default")
 
-elseif WaveSurvived.options["compatibility"] == "holoui" then
+elseif WaveSurvived.options["WaveSurvived_compatibility"] == 2 then
 	log("[WaveSurvived] Script based on: holoui")
 
 	WaveSurvived:LoadCustomScript("holoui")
 
-elseif WaveSurvived.options["compatibility"] == "pdthhud" then
+elseif WaveSurvived.options["WaveSurvived_compatibility"] == 3 then
 	log("[WaveSurvived] Script based on : pdthhud")
 
 	WaveSurvived:LoadCustomScript("pdth_hud")
 
-elseif WaveSurvived.options["compatibility"] == "lddghud" then
+elseif WaveSurvived.options["WaveSurvived_compatibility"] == 4 then
 	log("[WaveSurvived] Script based on : lddghud")
 
 	WaveSurvived:LoadCustomScript("lddg_hud")
 
-elseif WaveSurvived.options["compatibility"] == "restoration" then
+elseif WaveSurvived.options["WaveSurvived_compatibility"] == 5 then
 	log("[WaveSurvived] Script based on : restoration")
 
 	WaveSurvived:LoadCustomScript("restoration")
@@ -179,25 +91,21 @@ else -- If nothing is matching the condition, loads the default setup
 end
 
 
-
-
-
-
-if WaveSurvived.options["language"] == "english" then
+if WaveSurvived.options["WaveSurvived_language"] == 1 then
 
 	Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 		loc:load_localization_file( WaveSurvived.locfile_english )
 	end)
 	log("[WaveSurvived] Localization [ENGLISH] loaded")
 
-elseif WaveSurvived.options["language"] == "french" then
+elseif WaveSurvived.options["WaveSurvived_language"] == 2 then
 
 	Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 		loc:load_localization_file( WaveSurvived.locfile_french )
 	end)
 	log("[WaveSurvived] Localization [FRENCH] loaded")
 
-elseif WaveSurvived.options["language"] == "russian" then
+elseif WaveSurvived.options["WaveSurvived_language"] == 3 then
 
 	Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 		loc:load_localization_file( WaveSurvived.locfile_russian )

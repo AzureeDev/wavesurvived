@@ -9,10 +9,7 @@ WaveSurvived.locfile_english = ModPath .. "/loc/english.txt"
 WaveSurvived.locfile_french = ModPath .. "/loc/french.txt"
 WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
 
-WaveSurvived.options = {
-	compatibility = "WaveSurvived_compatibility_nohud",
-	language = "english"
-}
+WaveSurvived.options = {}
 
 function WaveSurvived:Load()		
 	local file = io.open( self.savefile , "r")
@@ -38,117 +35,40 @@ function WaveSurvived:Save()
 	end
 end
 
-if not Utils:IsInGameState() then
-	
-	if MenuManager then
 
-		MenuCallbackHandler.WaveSurvived_compatibility_callback = function(this, item)
-			
-			WaveSurvived.options.id_hud = tonumber(item:value()) 
+	MenuCallbackHandler.WaveSurvived_compatibility_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_compatibility = item:value()
 
-			log("[WaveSurvived] Current HUD : " .. WaveSurvived.options.id_hud)
-
-			if WaveSurvived.options.id_hud == 1 then
-
-				WaveSurvived.options = {
-				compatibility = "no_hud",
-				language = WaveSurvived.options["language"]
-				}
-
-				WaveSurvived:Save()
-
-			elseif WaveSurvived.options.id_hud == 2 then
-
-				WaveSurvived.options = {
-				compatibility = "holoui",
-				language = WaveSurvived.options["language"]
-				}
-				
-				WaveSurvived:Save()
-
-			elseif WaveSurvived.options.id_hud == 3 then
-
-				WaveSurvived.options = {
-				compatibility = "pdthhud",
-				language = WaveSurvived.options["language"]
-			}
-
-			WaveSurvived:Save()
-
-			elseif WaveSurvived.options.id_hud == 4 then
-
-				WaveSurvived.options = {
-				compatibility = "lddghud",
-				language = WaveSurvived.options["language"]
-				}
-				
-				WaveSurvived:Save()
-
-			elseif WaveSurvived.options.id_hud == 5 then
-
-				WaveSurvived.options = {
-				compatibility = "restoration",
-				language = WaveSurvived.options["language"]
-				}
-				
-				WaveSurvived:Save()
-			
-			end
-
-			WaveSurvived:Load()
+		log("[WaveSurvived] Current HUD : " .. WaveSurvived.options.WaveSurvived_compatibility)
+		WaveSurvived:Save()
+		
 	end
 
-		MenuCallbackHandler.WaveSurvived_language_callback = function(this, item)
-			
-			WaveSurvived.options.language_hud = tonumber(item:value()) 
-			log("[WaveSurvived] Current language : " .. WaveSurvived.options.language_hud)
-
-			if WaveSurvived.options.language_hud == 1 then
-
-				WaveSurvived.options = {
-				compatibility = WaveSurvived.options["compatibility"],
-				language = "english"
-				}
-
-				WaveSurvived:Save()
-			
-			elseif WaveSurvived.options.language_hud == 2 then
-
-				WaveSurvived.options = {
-				compatibility = WaveSurvived.options["compatibility"],
-				language = "french"
-				}
-
-				WaveSurvived:Save()
-
-			elseif WaveSurvived.options.language_hud == 3 then
-
-				WaveSurvived.options = {
-				compatibility = WaveSurvived.options["compatibility"],
-				language = "russian"
-				}
-
-			WaveSurvived:Save()
-			end
-		end
+	MenuCallbackHandler.WaveSurvived_language_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_language = item:value()
+		log("[WaveSurvived] Current language : " .. WaveSurvived.options.WaveSurvived_language)
+		WaveSurvived:Save()
 	end
 
+	WaveSurvived:Load()
 
-	if WaveSurvived.options["language"] == "english" then
+	if WaveSurvived.options["WaveSurvived_language"] == 1 then
 
 		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_english )
 		end)
 		log("[WaveSurvived] Localization [ENGLISH] loaded")
 
-	elseif WaveSurvived.options["language"] == "french" then
+	elseif WaveSurvived.options["WaveSurvived_language"] == 2 then
 
 		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_french )
 		end)
 		log("[WaveSurvived] Localization [FRENCH] loaded")
 
-	elseif WaveSurvived.options["language"] == "russian" then
+	elseif WaveSurvived.options["WaveSurvived_language"] == 3 then
 
 		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_russian )
@@ -164,6 +84,4 @@ if not Utils:IsInGameState() then
 
 	end
 
-	MenuHelper:LoadFromJsonFile(ModPath .. "/options/menu.json", WaveSurvived, WaveSurvived.options)
-
-end
+MenuHelper:LoadFromJsonFile(ModPath .. "/options/menu.json", WaveSurvived, WaveSurvived.options)

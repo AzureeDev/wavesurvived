@@ -7,6 +7,4 @@
 
     </Hooks>
 
-    <Localization directory="loc" default="english.txt"></Localization>
-
 </mod>
