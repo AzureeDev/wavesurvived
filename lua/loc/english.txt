@@ -9,6 +9,7 @@
     "WaveSurvived_language_english" : "English",
     "WaveSurvived_language_french" : "French",
     "WaveSurvived_language_russian" : "Russian",
+    "WaveSurvived_language_italian" : "Italian",
 
     "WaveSurvived_no_hud" : "No custom HUD",
     "WaveSurvived_holoui" : "HoloUI",
@@ -19,7 +20,7 @@
     "WaveSurvived_duration_title" : "Duration",
     "WaveSurvived_duration_desc" : "Choose the duration of the wave survived banner. Not compatible with Restoration Mod.",
 
-    "WaveSurvived_duration_original" : "Original",
+    "WaveSurvived_duration_original" : "Original (8.6 sec)",
     "WaveSurvived_duration_15sec" : "15 sec",
     "WaveSurvived_duration_20sec" : "20 sec",
     "WaveSurvived_duration_25sec" : "25 sec",

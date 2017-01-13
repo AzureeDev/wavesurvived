@@ -13,7 +13,8 @@
 			"items" : [
 				"WaveSurvived_language_english",
 				"WaveSurvived_language_french",
-				"WaveSurvived_language_russian"
+				"WaveSurvived_language_russian",
+				"WaveSurvived_language_italian"
 			],
 			"value" : "WaveSurvived_language",
 			"default_value" : 1,

@@ -1,0 +1,28 @@
+{
+    "WaveSurvived_compatibility_title" : "Opzioni di Wave Survived",
+    "WaveSurvived_compatibility_desc" : "Cambia la compatibilità della mod Wave Survived.",
+    "WaveSurvived_item_title" : "Compatibilità Mod",
+    "WaveSurvived_item_desc" : "Devi modificare la compatibilità della mod se stai usando un HUD differente. In caso contrario il gioco si chiuderà. Riavvia il gioco per rendere effettive le modifiche.",
+ 
+    "WaveSurvived_language_title" : "Lingua",
+    "WaveSurvived_language_desc" : "Cambia la lingua della mod - Riavvia il gioco per rendere effettive le modifiche.",
+    "WaveSurvived_language_english" : "English",
+    "WaveSurvived_language_french" : "French",
+    "WaveSurvived_language_russian" : "Russian",
+    "WaveSurvived_language_italian" : "Italiano",
+ 
+    "WaveSurvived_no_hud" : "Nessun HUD personalizzato",
+    "WaveSurvived_holoui" : "HoloUI",
+    "WaveSurvived_restoration" : "Restoration Mod",
+    "WaveSurvived_pdthhud" : "PDTH Hud",
+    "WaveSurvived_lddghud" : "LDDG Hud",
+ 
+    "WaveSurvived_duration_title" : "Durata",
+    "WaveSurvived_duration_desc" : "Scegli la durata del banner di Wave Survived. Incompatibile con Restoration Mod.",
+ 
+    "WaveSurvived_duration_original" : "Predefinito (8.6 sec)",
+    "WaveSurvived_duration_15sec" : "15 sec",
+    "WaveSurvived_duration_20sec" : "20 sec",
+    "WaveSurvived_duration_25sec" : "25 sec",
+    "WaveSurvived_duration_infinite" : "Infinito"
+}

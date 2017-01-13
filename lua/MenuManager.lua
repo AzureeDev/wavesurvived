@@ -8,6 +8,7 @@ WaveSurvived.savefile = SavePath .. "/WaveSurvived_options.txt"
 WaveSurvived.locfile_english = ModPath .. "/loc/english.txt"
 WaveSurvived.locfile_french = ModPath .. "/loc/french.txt"
 WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
+WaveSurvived.locfile_italian = ModPath .. "/loc/italian.txt"
 
 WaveSurvived.options = {}
 
@@ -63,28 +64,35 @@ end
 
 	if WaveSurvived.options["WaveSurvived_language"] == 1 then
 
-		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_english )
 		end)
 		log("[WaveSurvived] Localization [ENGLISH] loaded")
 
 	elseif WaveSurvived.options["WaveSurvived_language"] == 2 then
 
-		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_french )
 		end)
 		log("[WaveSurvived] Localization [FRENCH] loaded")
 
 	elseif WaveSurvived.options["WaveSurvived_language"] == 3 then
 
-		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_russian )
 		end)
 		log("[WaveSurvived] Localization [RUSSIAN] loaded")
 
+	elseif WaveSurvived.options["WaveSurvived_language"] == 4 then
+
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
+			loc:load_localization_file( WaveSurvived.locfile_italian )
+		end)
+		log("[WaveSurvived] Localization [ITALIAN] loaded")
+	
 	else -- if nothing match, loads the default localization
 
-		Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_LocExample", function(loc)
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
 			loc:load_localization_file( WaveSurvived.locfile_english )
 		end)
 		log("[WaveSurvived] Localization [ENGLISH] loaded")
