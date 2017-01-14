@@ -26,6 +26,56 @@ function HUDAssaultCorner:_start_assault(text_list)
 
 end
 
+function HUDAssaultCorner:_get_survived_assault_strings()
+	if WaveSurvived.options["WaveSurvived_customtext"] then
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line"
+			}
+		end
+	else
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line"
+			}
+		end
+	end
+end
+
 function HUDAssaultCorner:_end_assault()
 	if not self._assault then
 		self._start_assault_after_hostage_offset = nil

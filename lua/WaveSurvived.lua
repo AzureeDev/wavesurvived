@@ -64,6 +64,13 @@ MenuCallbackHandler.WaveSurvived_duration_callback = function(self, item)
 	
 end
 
+MenuCallbackHandler.WaveSurvived_customtext_callback = function(self, item)
+		
+	WaveSurvived.options.WaveSurvived_customtext = item:value()
+	log("[WaveSurvived] Custom text : " .. WaveSurvived.options.WaveSurvived_customtext)
+	WaveSurvived:Save()
+end
+
 WaveSurvived:Load()
 
 if WaveSurvived.options["WaveSurvived_compatibility"] == 1 then

@@ -24,5 +24,14 @@
     "WaveSurvived_duration_15sec" : "15 sec",
     "WaveSurvived_duration_20sec" : "20 sec",
     "WaveSurvived_duration_25sec" : "25 sec",
-    "WaveSurvived_duration_infinite" : "Infinite"
+    "WaveSurvived_duration_infinite" : "Infinite",
+
+    "WaveSurvived_customtext_title" : "Custom Banner",
+    "WaveSurvived_customtext_desc" : "Customize the text of the Wave Survived banner. Only compatible with the default setup, HoloUI and Restoration Mod.",
+
+    "WaveSurvived_customtext_1" : "WAVE SURVIVED",
+    "WaveSurvived_customtext_2" : "SURVIVED",
+    "WaveSurvived_customtext_3" : "ASSAULT SURVIVED",
+    "WaveSurvived_customtext_4" : "ASSAULT ENDED",
+    "WaveSurvived_customtext_5" : "IT'S NOT OVER YET!"
 }

@@ -6,38 +6,53 @@ function HUDAssaultCorner:denied_escapes()
 	end
 end
 
-function HUDAssaultCorner:_start_assault(text_list)
-	text_list = text_list or {""}
-	local assault_panel = self._hud_panel:child("assault_panel")
-	local text_panel = assault_panel:child("text_panel")
-	self:_set_text_list(text_list)
-	self._assault = true
-	if self._bg_box:child("text_panel") then
-		self._bg_box:child("text_panel"):stop()
-		self._bg_box:child("text_panel"):clear()
+function HUDAssaultCorner:_get_survived_assault_strings()
+	if WaveSurvived.options["WaveSurvived_customtext"] then
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_customtext_" .. WaveSurvived.options["WaveSurvived_customtext"],
+				"hud_assault_end_line"
+			}
+		end
 	else
-		self._bg_box:panel({name = "text_panel"})
-	end
-	self._bg_box:child("bg"):stop()
-	assault_panel:set_visible(true)
-	local icon_assaultbox = assault_panel:child("icon_assaultbox")
-	icon_assaultbox:stop()
-	icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
-	local config = {
-		attention_color = self._assault_color,
-		attention_forever = true,
-		attention_color_function = callback(self, self, "assault_attention_color_function")
-	}
-	self._bg_box:stop()
-	self._bg_box:animate(callback(nil, _G, "HUDBGBox_animate_open_left"), 0.75, 242, function()
-	end, config)
-	local box_text_panel = self._bg_box:child("text_panel")
-	box_text_panel:stop()
-	box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
-	self:_set_feedback_color(self._assault_color)
-	if alive(self._wave_bg_box) then
-		self._wave_bg_box:stop()
-		self._wave_bg_box:animate(callback(self, self, "_animate_wave_started"), self)
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line",
+				"hud_assault_survived",
+				"hud_assault_end_line"
+			}
+		end
 	end
 end
 

@@ -20,6 +20,10 @@
 			"default_value" : 1,
 		},
 		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
 			"type" : "multiple_choice",
 			"id" : "WaveSurvived_compatibility_choice",
 			"title" : "WaveSurvived_item_title",
@@ -49,6 +53,26 @@
 				"WaveSurvived_duration_infinite"
 			],
 			"value" : "WaveSurvived_duration",
+			"default_value" : 1,
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "WaveSurvived_customtext_choice",
+			"title" : "WaveSurvived_customtext_title",
+			"description" : "WaveSurvived_customtext_desc",
+			"callback" : "WaveSurvived_customtext_callback",
+			"items" : [
+				"WaveSurvived_customtext_1",
+				"WaveSurvived_customtext_2",
+				"WaveSurvived_customtext_3",
+				"WaveSurvived_customtext_4",
+				"WaveSurvived_customtext_5"
+			],
+			"value" : "WaveSurvived_customtext",
 			"default_value" : 1,
 		}
 	]
