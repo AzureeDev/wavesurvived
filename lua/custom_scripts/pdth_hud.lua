@@ -30,10 +30,8 @@ if pdth_hud then
 	end
 
 	function HUDAssaultCorner:_end_assault()
-		local color = Color(1, 0.1254902, 0.9019608, 0.1254902)
-	    self._fx_color = color
-		self._current_assault_color = color
 
+		
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local control_assault_title = assault_panel:child("control_assault_title")
 		local icon_assaultbox = assault_panel:child("icon_assaultbox")
@@ -47,8 +45,30 @@ if pdth_hud then
 		local const = pdth_hud.constants
 		control_assault_title:set_font_size(const.assault_font_size - 3.5)
 		control_assault_title:set_text("SURVIVED")
-		control_assault_title:set_color(color)
-	    icon_assaultbox:set_color(color)
+
+	    if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
+			control_assault_title:set_color(Color(255, 32, 230, 32) / 255)
+	 		icon_assaultbox:set_color(Color(255, 32, 230, 32) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
+			control_assault_title:set_color(Color(255, 255, 255, 0) / 255)
+	 		icon_assaultbox:set_color(Color(255, 255, 255, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
+			control_assault_title:set_color(Color(255, 255, 0, 0) / 255)
+	 		icon_assaultbox:set_color(Color(255, 255, 0, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
+			control_assault_title:set_color(Color(255, 0, 255, 255) / 255)
+	 		icon_assaultbox:set_color(Color(255, 0, 255, 255) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
+			control_assault_title:set_color(Color(255, 255, 127, 80) / 255)
+	 		icon_assaultbox:set_color(Color(255, 255, 127, 80) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
+	 		control_assault_title:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
+	 		icon_assaultbox:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
+	 	else	
+	 		control_assault_title:set_color(Color(1, 0.1254902, 0.9019608, 0.1254902))
+	 		icon_assaultbox:set_color(Color(1, 0.1254902, 0.9019608, 0.1254902))
+	 	end
+
 		assault_panel:animate(callback(self, self, "flash_assault_title"), true)
 		assault_panel:animate(callback(self, self, "_animate_wave_completed"), self)
 

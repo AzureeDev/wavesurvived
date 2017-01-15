@@ -83,7 +83,6 @@ function HUDAssaultCorner:_end_assault()
 	end
 	self._remove_hostage_offset = true
 	self._start_assault_after_hostage_offset = nil
-
 	self:_set_feedback_color(nil)
 	local assault_panel = self._hud_panel:child("assault_panel")
 	local text_panel = assault_panel:child("text_panel")
@@ -92,14 +91,29 @@ function HUDAssaultCorner:_end_assault()
 	if self:is_safehouse_raid() then
 		self._raid_finised = false
 		wave_panel = self._hud_panel:child("wave_panel")
-		self:_update_assault_hud_color(self._assault_survived_color)
+		self:_update_assault_hud_color(color_survived)
 		self:_set_text_list(self:_get_survived_assault_strings())
 		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 		self._completed_waves = self._completed_waves + 1
 		wave_panel:animate(callback(self, self, "_animate_wave_completed"), self)
 	else
 		if not self:denied_escapes() then
+
+		if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
+			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
+			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
+			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
+			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
+			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
+			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
+	 	else	
 			self:_update_assault_hud_color(self._assault_survived_color)
+	 	end
 			self:_set_text_list(self:_get_survived_assault_strings())
 			text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 			self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)

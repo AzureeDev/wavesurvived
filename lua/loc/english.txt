@@ -33,5 +33,22 @@
     "WaveSurvived_customtext_2" : "SURVIVED",
     "WaveSurvived_customtext_3" : "ASSAULT SURVIVED",
     "WaveSurvived_customtext_4" : "ASSAULT ENDED",
-    "WaveSurvived_customtext_5" : "IT'S NOT OVER YET!"
+    "WaveSurvived_customtext_5" : "IT'S NOT OVER YET!",
+
+    "WaveSurvived_custompanelcolor_title" : "Custom Panel Color",
+    "WaveSurvived_custompanelcolor_desc" : "Customize the Wave Survived panel color. Not compatible with HoloUI.",
+
+    "WaveSurvived_custompanelcolor_1" : "Green lime (default)",
+    "WaveSurvived_custompanelcolor_2" : "Yellow",
+    "WaveSurvived_custompanelcolor_3" : "Red",
+    "WaveSurvived_custompanelcolor_4" : "Cyan",
+    "WaveSurvived_custompanelcolor_5" : "Orange",
+    "WaveSurvived_custompanelcolor_6" : "Custom",
+
+    "WaveSurvived_custompanelcolor_customslider_red_title" : "Red",
+    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Amount of red (RGB Format)",
+    "WaveSurvived_custompanelcolor_customslider_green_title" : "Green",
+    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Amount of green (RGB Format)",
+    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blue",
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Amount of blue (RGB Format)"
 }

@@ -71,6 +71,31 @@ MenuCallbackHandler.WaveSurvived_customtext_callback = function(self, item)
 	WaveSurvived:Save()
 end
 
+MenuCallbackHandler.WaveSurvived_custompanelcolor_callback = function(self, item)
+		
+	WaveSurvived.options.WaveSurvived_custompanelcolor = item:value()
+	log("[WaveSurvived] Custom color : " .. WaveSurvived.options.WaveSurvived_custompanelcolor)
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_customslider_red_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_customslider_red = item:value()
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_customslider_green_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_customslider_green = item:value()
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_customslider_blue_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_customslider_blue = item:value()
+	WaveSurvived:Save()
+end
+
 WaveSurvived:Load()
 
 if WaveSurvived.options["WaveSurvived_compatibility"] == 1 then

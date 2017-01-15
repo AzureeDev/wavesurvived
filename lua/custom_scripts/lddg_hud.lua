@@ -33,13 +33,27 @@ function HUDAssaultCorner:_end_assault()
 	self._remove_hostage_offset = true
 	self._start_assault_after_hostage_offset = nil
 	local assault_panel = self._hud_panel:child("assault_panel")
-	local color_green = Color(1, 0.1254902, 0.9019608, 0.1254902)
 	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
 	
 	if not self:denied_escapes() then
 		self._survived = true
 		assault_panel:child("text"):set_text("WAVE SURVIVED")
-		assault_panel:child("text"):set_color( color_green )
+
+		if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
+	 		assault_panel:child("text"):set_color( Color(255, 32, 230, 32) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
+	 		assault_panel:child("text"):set_color( Color(255, 255, 255, 0) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
+	 		assault_panel:child("text"):set_color( Color(255, 255, 0, 0) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
+	 		assault_panel:child("text"):set_color( Color(255, 0, 255, 255) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
+	 		assault_panel:child("text"):set_color( Color(255, 255, 127, 80) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
+	 		assault_panel:child("text"):set_color( Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255 )
+	 	else	
+			assault_panel:child("text"):set_color( Color(1, 0.1254902, 0.9019608, 0.1254902) )
+	 	end
 		assault_panel:animate(callback(self, self, "animate_assault_in_progress"))
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))

@@ -74,6 +74,63 @@
 			],
 			"value" : "WaveSurvived_customtext",
 			"default_value" : 1,
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "WaveSurvived_custompanelcolor_choice",
+			"title" : "WaveSurvived_custompanelcolor_title",
+			"description" : "WaveSurvived_custompanelcolor_desc",
+			"callback" : "WaveSurvived_custompanelcolor_callback",
+			"items" : [
+				"WaveSurvived_custompanelcolor_1",
+				"WaveSurvived_custompanelcolor_2",
+				"WaveSurvived_custompanelcolor_3",
+				"WaveSurvived_custompanelcolor_4",
+				"WaveSurvived_custompanelcolor_5",
+				"WaveSurvived_custompanelcolor_6"
+			],
+			"value" : "WaveSurvived_custompanelcolor",
+			"default_value" : 1,
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_customslider_red_choice",
+		    "title" : "WaveSurvived_custompanelcolor_customslider_red_title",
+		    "description" : "WaveSurvived_custompanelcolor_customslider_red_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_customslider_red_callback",
+		    "value" : "WaveSurvived_custompanelcolor_customslider_red",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_customslider_green_choice",
+		    "title" : "WaveSurvived_custompanelcolor_customslider_green_title",
+		    "description" : "WaveSurvived_custompanelcolor_customslider_green_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_customslider_green_callback",
+		    "value" : "WaveSurvived_custompanelcolor_customslider_green",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_customslider_blue_choice",
+		    "title" : "WaveSurvived_custompanelcolor_customslider_blue_title",
+		    "description" : "WaveSurvived_custompanelcolor_customslider_blue_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_customslider_blue_callback",
+		    "value" : "WaveSurvived_custompanelcolor_customslider_blue",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
 		}
 	]
 }

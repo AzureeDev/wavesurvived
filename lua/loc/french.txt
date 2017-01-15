@@ -33,5 +33,22 @@
     "WaveSurvived_customtext_2" : "SURVÉCU",
     "WaveSurvived_customtext_3" : "ASSAUT SURVÉCU",
     "WaveSurvived_customtext_4" : "ASSAUT TERMINÉ",
-    "WaveSurvived_customtext_5" : "C'EST PAS ENCORE FINI !"
+    "WaveSurvived_customtext_5" : "C'EST PAS ENCORE FINI !",
+
+    "WaveSurvived_custompanelcolor_title" : "Couleur de bannière personnalisée",
+    "WaveSurvived_custompanelcolor_desc" : "Personnalisez la couleur de la bannière Wave Survived. Compatible avec tous les ATH sauf HoloUI.",
+
+    "WaveSurvived_custompanelcolor_1" : "Citron Vert (Défaut)",
+    "WaveSurvived_custompanelcolor_2" : "Jaune",
+    "WaveSurvived_custompanelcolor_3" : "Rouge",
+    "WaveSurvived_custompanelcolor_4" : "Cyan",
+    "WaveSurvived_custompanelcolor_5" : "Orange",
+    "WaveSurvived_custompanelcolor_6" : "Personalisé",
+
+    "WaveSurvived_custompanelcolor_customslider_red_title" : "Rouge",
+    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Quantité de rouge (Format RGB)",
+    "WaveSurvived_custompanelcolor_customslider_green_title" : "Vert",
+    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Quantité de vert (Format RGB)",
+    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Bleu",
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantité de bleu (Format RGB)"
 }
