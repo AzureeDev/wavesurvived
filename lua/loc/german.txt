@@ -1,0 +1,55 @@
+{
+   "WaveSurvived_compatibility_title" : "Optionen Wave Suvived",
+   "WaveSurvived_compatibility_desc" : "Ändern Sie die Mod Kompatibilität für Wave Survived.",
+   "WaveSurvived_item_title" : "Mod-Kompatibilität",
+   "WaveSurvived_item_desc" : "Sie müssen die Mod-Kompatibilität ändern, wenn Sie ein anderes HUD verwenden. Andernfalls wird das Spiel abstürzen. Neustart erforderlich.",
+
+   "WaveSurvived_language_title" : "Sprache",
+   "WaveSurvived_language_desc" : "Ändern Sie die Sprache des Mods Neustart erforderlich.",
+   "WaveSurvived_language_english" : "Englisch",
+   "WaveSurvived_language_french" : "Französisch",
+   "WaveSurvived_language_russian" : "Russisch",
+   "WaveSurvived_language_italian" : "Italienisch",
+   "WaveSurvived_language_german" : "Deutsche",
+
+   "WaveSurvived_no_hud" : "Kein benutzerdefiniertes HUD",
+   "WaveSurvived_holoui" : "HoloUI",
+   "WaveSurvived_restoration" : "Restoration Mod",
+   "WaveSurvived_pdthhud" : "PDTH Hud",
+   "WaveSurvived_lddghud" : "LDDG Hud",
+
+   "WaveSurvived_duration_title" : "Dauer",
+   "WaveSurvived_duration_desc" : "Wählen Sie die Dauer des Welle überlebt Banner. Nicht kompatibel mit Restoration Mod.",
+
+   "WaveSurvived_duration_original" : "Original (8.6 sec)",
+   "WaveSurvived_duration_15sec" : "15 sec",
+   "WaveSurvived_duration_20sec" : "20 sec",
+   "WaveSurvived_duration_25sec" : "25 sec",
+   "WaveSurvived_duration_infinite" : "Unendlich",
+
+   "WaveSurvived_customtext_title" : "Eigener Banner",
+   "WaveSurvived_customtext_desc" : "Passen Sie den Text des Wave Survived Banner an. Nur kompatibel mit dem Standard-Setup, HoloUI und Restoration Mod.",
+
+   "WaveSurvived_customtext_1" : "WELLE ÜBERLEBEN",
+   "WaveSurvived_customtext_2" : "ÜBERLEBT",
+   "WaveSurvived_customtext_3" : "ANGRIFF ÜBERLEBT",
+   "WaveSurvived_customtext_4" : "ANGRIFF ZU ENDE",
+   "WaveSurvived_customtext_5" : "ES IST NOCH NICHT VORBEI!",
+
+   "WaveSurvived_custompanelcolor_title": "Benutzerdefinierte Bedienfeldfarbe",
+   "WaveSurvived_custompanelcolor_desc": "Passen Sie die Wave Survived Panel-Farbe an Nicht kompatibel mit HoloUI.", 
+
+   "WaveSurvived_custompanelcolor_1" : "Grünkalk (Standard)",
+   "WaveSurvived_custompanelcolor_2" : "Gelb",
+   "WaveSurvived_custompanelcolor_3" : "Rot",
+   "WaveSurvived_custompanelcolor_4" : "Cyan",
+   "WaveSurvived_custompanelcolor_5" : "Orange",
+   "WaveSurvived_custompanelcolor_6" : "Eigen",
+
+   "WaveSurvived_custompanelcolor_customslider_red_title" : "Rot",
+   "WaveSurvived_custompanelcolor_customslider_red_desc" : "Menge an rot (RGB Format)",
+   "WaveSurvived_custompanelcolor_customslider_green_title" : "Grün",
+   "WaveSurvived_custompanelcolor_customslider_green_desc" : "Menge an grün (RGB Format)",
+   "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blau",
+   "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Menge an blau (RGB Format)"
+}

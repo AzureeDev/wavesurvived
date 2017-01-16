@@ -10,6 +10,7 @@
     "WaveSurvived_language_french" : "Français",
     "WaveSurvived_language_russian" : "Russe",
     "WaveSurvived_language_italian" : "Italien",
+    "WaveSurvived_language_german" : "Allemand",
 
     "WaveSurvived_no_hud" : "Aucun ATH moddé",
     "WaveSurvived_holoui" : "HoloUI",

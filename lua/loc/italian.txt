@@ -10,6 +10,7 @@
     "WaveSurvived_language_french" : "French",
     "WaveSurvived_language_russian" : "Russian",
     "WaveSurvived_language_italian" : "Italiano",
+    "WaveSurvived_language_german" : "Tedesco",
  
     "WaveSurvived_no_hud" : "Nessun HUD personalizzato",
     "WaveSurvived_holoui" : "HoloUI",
@@ -26,29 +27,29 @@
     "WaveSurvived_duration_25sec" : "25 sec",
     "WaveSurvived_duration_infinite" : "Infinito",
 
-    "WaveSurvived_customtext_title" : "Custom Banner",
-    "WaveSurvived_customtext_desc" : "Customize the text of the Wave Survived banner. Only compatible with the default setup, HoloUI and Restoration Mod.",
-
-    "WaveSurvived_customtext_1" : "WAVE SURVIVED",
-    "WaveSurvived_customtext_2" : "SURVIVED",
-    "WaveSurvived_customtext_3" : "ASSAULT SURVIVED",
-    "WaveSurvived_customtext_4" : "ASSAULT ENDED",
-    "WaveSurvived_customtext_5" : "IT'S NOT OVER YET!",
-
-    "WaveSurvived_custompanelcolor_title" : "Custom Panel Color",
-    "WaveSurvived_custompanelcolor_desc" : "Customize the Wave Survived panel color. Not compatible with HoloUI.",
-
-    "WaveSurvived_custompanelcolor_1" : "Green lime (default)",
-    "WaveSurvived_custompanelcolor_2" : "Yellow",
-    "WaveSurvived_custompanelcolor_3" : "Red",
-    "WaveSurvived_custompanelcolor_4" : "Cyan",
-    "WaveSurvived_custompanelcolor_5" : "Orange",
-    "WaveSurvived_custompanelcolor_6" : "Custom",
-
-    "WaveSurvived_custompanelcolor_customslider_red_title" : "Red",
-    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Amount of red (RGB Format)",
-    "WaveSurvived_custompanelcolor_customslider_green_title" : "Green",
-    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Amount of green (RGB Format)",
-    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blue",
-    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Amount of blue (RGB Format)"
+    "WaveSurvived_customtext_title" : "Banner Personalizzato",
+    "WaveSurvived_customtext_desc" : "Personalizza il testo del banner di Wave Survived. Compatibile solamente con le impostazioni predefinite, HoloUI e Restoration Mod.",
+ 
+    "WaveSurvived_customtext_1" : "ONDATA SUPERATA",
+    "WaveSurvived_customtext_2" : "SOPRAVVISSUTO",
+    "WaveSurvived_customtext_3" : "ASSALTO SUPERATO",
+    "WaveSurvived_customtext_4" : "ASSALTO FINITO",
+    "WaveSurvived_customtext_5" : "NON E' ANCORA FINITA!",
+ 
+    "WaveSurvived_custompanelcolor_title" : "Colore Pannello Personalizzato",
+    "WaveSurvived_custompanelcolor_desc" : "Personalizza il colore del pannello di Wave Survived. Non compatibile con HoloUI.",
+ 
+    "WaveSurvived_custompanelcolor_1" : "Verde lime (predefinito)",
+    "WaveSurvived_custompanelcolor_2" : "Giallo",
+    "WaveSurvived_custompanelcolor_3" : "Rosso",
+    "WaveSurvived_custompanelcolor_4" : "Ciano",
+    "WaveSurvived_custompanelcolor_5" : "Arancione",
+    "WaveSurvived_custompanelcolor_6" : "Personale",
+ 
+    "WaveSurvived_custompanelcolor_customslider_red_title" : "Rosso",
+    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Quantità di rosso (Formato RGB)",
+    "WaveSurvived_custompanelcolor_customslider_green_title" : "Verde",
+    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Quantità di verde (Formato RGB)",
+    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blu",
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantità di blu (Formato RGB)"
 }

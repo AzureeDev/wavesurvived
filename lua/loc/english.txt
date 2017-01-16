@@ -10,6 +10,7 @@
     "WaveSurvived_language_french" : "French",
     "WaveSurvived_language_russian" : "Russian",
     "WaveSurvived_language_italian" : "Italian",
+    "WaveSurvived_language_german" : "German",
 
     "WaveSurvived_no_hud" : "No custom HUD",
     "WaveSurvived_holoui" : "HoloUI",

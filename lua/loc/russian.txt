@@ -10,6 +10,7 @@
     "WaveSurvived_language_french" : "Французский",
     "WaveSurvived_language_russian" : "Русский",
     "WaveSurvived_language_italian" : "итальянский",
+    "WaveSurvived_language_german" : "Немецкий",
 
     "WaveSurvived_no_hud" : "Без модифицированного интерфейса",
     "WaveSurvived_holoui" : "HoloUI",
