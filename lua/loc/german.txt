@@ -11,6 +11,7 @@
    "WaveSurvived_language_russian" : "Russisch",
    "WaveSurvived_language_italian" : "Italienisch",
    "WaveSurvived_language_german" : "Deutsche",
+   "WaveSurvived_language_spanish" : "Spanisch",
 
    "WaveSurvived_no_hud" : "Kein benutzerdefiniertes HUD",
    "WaveSurvived_holoui" : "HoloUI",
@@ -30,7 +31,7 @@
    "WaveSurvived_customtext_title" : "Eigener Banner",
    "WaveSurvived_customtext_desc" : "Passen Sie den Text des Wave Survived Banner an. Nur kompatibel mit dem Standard-Setup, HoloUI und Restoration Mod.",
 
-   "WaveSurvived_customtext_1" : "WELLE ÜBERLEBEN",
+   "WaveSurvived_customtext_1" : "WELLE ÜBERLEBT",
    "WaveSurvived_customtext_2" : "ÜBERLEBT",
    "WaveSurvived_customtext_3" : "ANGRIFF ÜBERLEBT",
    "WaveSurvived_customtext_4" : "ANGRIFF ZU ENDE",

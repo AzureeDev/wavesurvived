@@ -1,0 +1,56 @@
+{
+    "WaveSurvived_compatibility_title" : "Opciones de Wave Survived",
+    "WaveSurvived_compatibility_desc" : "Cambia la compatibilidad del Mod Wave Survived",
+    "WaveSurvived_item_title" : "Compatibilidad del Mod",
+    "WaveSurvived_item_desc" : "Necesitaras cambiar la compatibilidad del Mod antes de iniciar. Por que si no, el juego crasheara. Cambia la compatibilidad y reinicia el juego para que el cambio tome efecto",
+ 
+    "WaveSurvived_language_title" : "Lenguaje",
+    "WaveSurvived_language_desc" : "Cambia el lenguaje del mod - Reinicia el juego para que tome efecto",
+    "WaveSurvived_language_english" : "Ingles",
+    "WaveSurvived_language_french" : "Francés",
+    "WaveSurvived_language_russian" : "Ruso",
+    "WaveSurvived_language_italian" : "Italiano",
+    "WaveSurvived_language_german" : "Alemán",
+    "WaveSurvived_language_spanish" : "Español",
+ 
+    "WaveSurvived_no_hud" : "No HUD personalizado",
+    "WaveSurvived_holoui" : "HoloUI",
+    "WaveSurvived_restoration" : "Restoration Mod",
+    "WaveSurvived_pdthhud" : "PDTH Hud",
+    "WaveSurvived_lddghud" : "LDDG Hud",
+ 
+    "WaveSurvived_duration_title" : "Duración",
+    "WaveSurvived_duration_desc" : "Selecciona la duración del anuncio. NO compatible con Restoration HUD",
+ 
+    "WaveSurvived_duration_original" : "Original (8.6 sec)",
+    "WaveSurvived_duration_15sec" : "15 sec",
+    "WaveSurvived_duration_20sec" : "20 sec",
+    "WaveSurvived_duration_25sec" : "25 sec",
+    "WaveSurvived_duration_infinite" : "Infinito",
+ 
+    "WaveSurvived_customtext_title" : "Anuncio personalizado",
+    "WaveSurvived_customtext_desc" : "Personaliza el texto del Wave Survived. Solo compatible con la configuración predeterminada, HoloUI y Restoration Mod.",
+ 
+    "WaveSurvived_customtext_1" : "OLEADA COMPLETADA",
+    "WaveSurvived_customtext_2" : "SOBREVIVIÓ",
+    "WaveSurvived_customtext_3" : "SOBREVIVISTE AL ASALTO",
+    "WaveSurvived_customtext_4" : "FIN DEL ASALTO",
+    "WaveSurvived_customtext_5" : "ESTO NO TERMINA AQUÍ",
+ 
+    "WaveSurvived_custompanelcolor_title" : "Color del panel personalizable",
+    "WaveSurvived_custompanelcolor_desc" : "Personaliza el color del panel de Wave Survived. NO compatible con HoloUI",
+ 
+    "WaveSurvived_custompanelcolor_1" : "Verde lima (predeterminado)",
+    "WaveSurvived_custompanelcolor_2" : "Amarillo",
+    "WaveSurvived_custompanelcolor_3" : "Rojo",
+    "WaveSurvived_custompanelcolor_4" : "Cían",
+    "WaveSurvived_custompanelcolor_5" : "Naranja",
+    "WaveSurvived_custompanelcolor_6" : "Personalizado",
+ 
+    "WaveSurvived_custompanelcolor_customslider_red_title" : "Rojo",
+    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Cantidad de rojo (Formato RGB)",
+    "WaveSurvived_custompanelcolor_customslider_green_title" : "Verde",
+    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Cantidad de verde (Formato RGB)",
+    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Azul",
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Cantidad de azul (Formato RGB)"
+}

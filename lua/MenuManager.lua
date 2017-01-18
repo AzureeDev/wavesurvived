@@ -10,6 +10,7 @@ WaveSurvived.locfile_french = ModPath .. "/loc/french.txt"
 WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
 WaveSurvived.locfile_italian = ModPath .. "/loc/italian.txt"
 WaveSurvived.locfile_german = ModPath .. "/loc/german.txt"
+WaveSurvived.locfile_spanish = ModPath .. "/loc/spanish.txt"
 
 WaveSurvived.options = {}
 
@@ -129,6 +130,13 @@ end
 			loc:load_localization_file( WaveSurvived.locfile_german )
 		end)
 		log("[WaveSurvived] Localization [GERMAN] loaded")
+
+	elseif WaveSurvived.options["WaveSurvived_language"] == 6 then
+
+		Hooks:Add("LocalizationManagerPostInit", "WaveSurvived_Localization", function(loc)
+			loc:load_localization_file( WaveSurvived.locfile_spanish )
+		end)
+		log("[WaveSurvived] Localization [SPANISH] loaded")
 	
 	else -- if nothing match, loads the default localization
 

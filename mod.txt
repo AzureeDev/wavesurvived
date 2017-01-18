@@ -3,11 +3,11 @@
     "description" : "Add the Wave Survived banner into all heists.",
     "author" : "Nepgearsy",
     "contact" : "http://steamcommunity.com/id/Nepgearsy",
-    "version" : "1.15b",
+    "version" : "1.15c",
     "priority" : 1,
     "updates" : [
     {
-        "revision" : 9,
+        "revision" : 10,
         "identifier" : "wavesurvived",
     }
     ],
