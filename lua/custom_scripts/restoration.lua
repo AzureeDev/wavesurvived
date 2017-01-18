@@ -99,21 +99,22 @@ function HUDAssaultCorner:_end_assault()
 	else
 		if not self:denied_escapes() then
 
-		if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
-			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
-			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
-			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
-			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
-			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
-			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
-	 	else	
-			self:_update_assault_hud_color(self._assault_survived_color)
-	 	end
+			if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
+				self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
+				self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
+				self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
+				self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
+				self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
+				self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
+		 	else	
+				self:_update_assault_hud_color(self._assault_survived_color)
+		 	end
+
 			self:_set_text_list(self:_get_survived_assault_strings())
 			text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 			self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)
@@ -125,7 +126,7 @@ end
 
 function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
 	if not self.is_safehouse_raid() then
-		wait(20)
+		wait(15)
 		self:_close_assault_box()
 	else
 		local wave_text = panel:child("num_waves")

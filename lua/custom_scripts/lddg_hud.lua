@@ -57,7 +57,23 @@ function HUDAssaultCorner:_end_assault()
 		assault_panel:animate(callback(self, self, "animate_assault_in_progress"))
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
-		icon_assaultbox:set_color( color_green )
+
+		if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
+	 		icon_assaultbox:set_color( Color(255, 32, 230, 32) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
+	 		icon_assaultbox:set_color( Color(255, 255, 255, 0) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
+	 		icon_assaultbox:set_color( Color(255, 255, 0, 0) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
+	 		icon_assaultbox:set_color( Color(255, 0, 255, 255) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
+	 		icon_assaultbox:set_color( Color(255, 255, 127, 80) / 255 )
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
+	 		icon_assaultbox:set_color( Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255 )
+	 	else	
+			icon_assaultbox:set_color( Color(1, 0.1254902, 0.9019608, 0.1254902) )
+	 	end
+
 		self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)
 	end
 end
