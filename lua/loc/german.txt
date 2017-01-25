@@ -12,7 +12,7 @@
    "WaveSurvived_language_italian" : "Italienisch",
    "WaveSurvived_language_german" : "Deutsche",
    "WaveSurvived_language_spanish" : "Spanisch",
-
+   
    "WaveSurvived_no_hud" : "Kein benutzerdefiniertes HUD",
    "WaveSurvived_holoui" : "HoloUI",
    "WaveSurvived_restoration" : "Restoration Mod",
@@ -52,5 +52,8 @@
    "WaveSurvived_custompanelcolor_customslider_green_title" : "Grün",
    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Menge an grün (RGB Format)",
    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blau",
-   "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Menge an blau (RGB Format)"
+   "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Menge an blau (RGB Format)",
+
+   "WaveSurvived_custompanelcolor_website_title" : "Website for RGB colors",
+   "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required."
 }

@@ -52,5 +52,8 @@
     "WaveSurvived_custompanelcolor_customslider_green_title" : "Green",
     "WaveSurvived_custompanelcolor_customslider_green_desc" : "Amount of green (RGB Format)",
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blue",
-    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Amount of blue (RGB Format)"
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Amount of blue (RGB Format)",
+
+    "WaveSurvived_custompanelcolor_website_title" : "Website for RGB colors",
+    "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required."
 }

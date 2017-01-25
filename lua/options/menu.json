@@ -133,6 +133,17 @@
 		    "max" : 255,
 		    "min" : 0,
 		    "step" : 1
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
+			"type" : "button",
+			"id" : "WaveSurvived_custompanelcolor_website",
+			"title" : "WaveSurvived_custompanelcolor_website_title",
+			"description" : "WaveSurvived_custompanelcolor_website_desc",
+			"callback" : "WaveSurvived_custompanelcolor_website_callback"
 		}
 	]
 }

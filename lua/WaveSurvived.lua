@@ -11,6 +11,7 @@ WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
 WaveSurvived.locfile_italian = ModPath .. "/loc/italian.txt"
 WaveSurvived.locfile_german = ModPath .. "/loc/german.txt"
 WaveSurvived.locfile_spanish = ModPath .. "/loc/spanish.txt"
+WaveSurvived.locfile_korean = ModPath .. "/loc/korean.txt"
 
 WaveSurvived.options = {}
 
@@ -96,6 +97,10 @@ MenuCallbackHandler.WaveSurvived_custompanelcolor_customslider_blue_callback = f
 	
 	WaveSurvived.options.WaveSurvived_custompanelcolor_customslider_blue = item:value()
 	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_website_callback = function(self, item)
+	Steam:overlay_activate("url", "http://www.rapidtables.com/web/color/RGB_Color.htm")
 end
 
 WaveSurvived:Load()

@@ -52,5 +52,8 @@
     "WaveSurvived_custompanelcolor_customslider_green_title" : "Vert",
     "WaveSurvived_custompanelcolor_customslider_green_desc" : "Quantité de vert (Format RGB)",
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Bleu",
-    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantité de bleu (Format RGB)"
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantité de bleu (Format RGB)",
+
+    "WaveSurvived_custompanelcolor_website_title" : "Site internet pour les couleurs RVB",
+    "WaveSurvived_custompanelcolor_website_desc" : "Cela ouvrira une page internet qui vous permettra de choisir précisément la couleur RVB que vous voulez. Steam Overlay nécéssaire."
 }
