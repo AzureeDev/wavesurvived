@@ -12,7 +12,8 @@
    "WaveSurvived_language_italian" : "Italienisch",
    "WaveSurvived_language_german" : "Deutsche",
    "WaveSurvived_language_spanish" : "Spanisch",
-   
+   "WaveSurvived_language_hungarian" : "Hungarian",
+
    "WaveSurvived_no_hud" : "Kein benutzerdefiniertes HUD",
    "WaveSurvived_holoui" : "HoloUI",
    "WaveSurvived_restoration" : "Restoration Mod",

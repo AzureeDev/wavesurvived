@@ -12,6 +12,7 @@
     "WaveSurvived_language_italian" : "Italiano",
     "WaveSurvived_language_german" : "German",
     "WaveSurvived_language_spanish" : "Spanish",
+    "WaveSurvived_language_hungarian" : "Hungarian",
  
     "WaveSurvived_no_hud" : "Nessun HUD personalizzato",
     "WaveSurvived_holoui" : "HoloUI",

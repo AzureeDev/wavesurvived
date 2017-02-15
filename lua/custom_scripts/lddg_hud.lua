@@ -1,7 +1,6 @@
 function HUDAssaultCorner:show_point_of_no_return_timer()
 	local delay_time = self._assault and 1.2 or 0
-	self.hide_survived = true
-	self:_end_assault()
+	self:_close_assault_box()
 	local point_of_no_return_panel = self._hud_panel:child("point_of_no_return_panel")
 	self:_hide_hostages()
 	point_of_no_return_panel:stop()
@@ -37,7 +36,6 @@ function HUDAssaultCorner:_end_assault()
 	local assault_panel = self._hud_panel:child("assault_panel")
 	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
 	
-	if not self:hide_survived then
 		self._survived = true
 		assault_panel:child("text"):set_text("WAVE SURVIVED")
 
@@ -77,7 +75,6 @@ function HUDAssaultCorner:_end_assault()
 	 	end
 
 		self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)
-	end
 end
 
 function HUDAssaultCorner:animate_assault_in_progress(o)
