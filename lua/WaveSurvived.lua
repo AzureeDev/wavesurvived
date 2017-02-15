@@ -11,7 +11,6 @@ WaveSurvived.locfile_russian = ModPath .. "/loc/russian.txt"
 WaveSurvived.locfile_italian = ModPath .. "/loc/italian.txt"
 WaveSurvived.locfile_german = ModPath .. "/loc/german.txt"
 WaveSurvived.locfile_spanish = ModPath .. "/loc/spanish.txt"
-WaveSurvived.locfile_korean = ModPath .. "/loc/korean.txt"
 
 WaveSurvived.options = {}
 

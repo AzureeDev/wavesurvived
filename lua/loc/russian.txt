@@ -54,6 +54,6 @@
    	"WaveSurvived_custompanelcolor_customslider_blue_title" : "Синий",
    	"WaveSurvived_custompanelcolor_customslider_blue_desc" : "Количество синего (RGB формат)",
 
-    "WaveSurvived_custompanelcolor_website_title" : "Website for RGB colors",
-    "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required."
+    "WaveSurvived_custompanelcolor_website_title" : "Сайт для RGB цветов",
+    "WaveSurvived_custompanelcolor_website_desc" : "Открывает са, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam."
 }

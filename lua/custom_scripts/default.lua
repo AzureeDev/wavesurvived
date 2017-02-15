@@ -1,9 +1,13 @@
-function HUDAssaultCorner:denied_escapes()
-	local f = string.find(managers.job:current_level_id(), "escape")
-
-	if f then
-		return true
-	end
+function HUDAssaultCorner:show_point_of_no_return_timer()
+	local delay_time = self._assault and 1.2 or 0
+	self.hide_survived = true
+	self:_end_assault()
+	local point_of_no_return_panel = self._hud_panel:child("point_of_no_return_panel")
+	self:_hide_hostages()
+	point_of_no_return_panel:stop()
+	point_of_no_return_panel:animate(callback(self, self, "_animate_show_noreturn"), delay_time)
+	self:_set_feedback_color(self._noreturn_color)
+	self._point_of_no_return = true
 end
 
 function HUDAssaultCorner:_get_survived_assault_strings()
@@ -72,7 +76,7 @@ function HUDAssaultCorner:_end_assault()
  	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
  	icon_assaultbox:stop()
 	
-	if not self:denied_escapes() then
+	if not self:hide_survived then
  	
 	 	if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
 			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
