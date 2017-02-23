@@ -43,6 +43,10 @@
 			"default_value" : 1,
 		},
 		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
 			"type" : "multiple_choice",
 			"id" : "WaveSurvived_duration_choice",
 			"title" : "WaveSurvived_duration_title",
@@ -59,10 +63,6 @@
 			"default_value" : 1,
 		},
 		{
-			"type" : "divider",
-			"size" : 20
-		},
-		{
 			"type" : "multiple_choice",
 			"id" : "WaveSurvived_customtext_choice",
 			"title" : "WaveSurvived_customtext_title",
@@ -76,6 +76,21 @@
 				"WaveSurvived_customtext_5"
 			],
 			"value" : "WaveSurvived_customtext",
+			"default_value" : 1,
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "WaveSurvived_endless_customtext_choice",
+			"title" : "WaveSurvived_endless_customtext_title",
+			"description" : "WaveSurvived_endless_customtext_desc",
+			"callback" : "WaveSurvived_endless_customtext_callback",
+			"items" : [
+				"WaveSurvived_endless_customtext_1",
+				"WaveSurvived_endless_customtext_2",
+				"WaveSurvived_endless_customtext_3",
+				"WaveSurvived_endless_customtext_4"
+			],
+			"value" : "WaveSurvived_endless_customtext",
 			"default_value" : 1,
 		},
 		{

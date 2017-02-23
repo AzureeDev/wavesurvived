@@ -74,6 +74,13 @@ MenuCallbackHandler.WaveSurvived_customtext_callback = function(self, item)
 	WaveSurvived:Save()
 end
 
+MenuCallbackHandler.WaveSurvived_endless_customtext_callback = function(self, item)
+		
+	WaveSurvived.options.WaveSurvived_endless_customtext = item:value()
+	log("[EndlessWave] Custom text : " .. WaveSurvived.options.WaveSurvived_endless_customtext)
+	WaveSurvived:Save()
+end
+
 MenuCallbackHandler.WaveSurvived_custompanelcolor_callback = function(self, item)
 		
 	WaveSurvived.options.WaveSurvived_custompanelcolor = item:value()

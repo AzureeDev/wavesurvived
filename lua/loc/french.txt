@@ -29,7 +29,7 @@
     "WaveSurvived_duration_25sec" : "25 sec",
     "WaveSurvived_duration_infinite" : "Infini",
 
-    "WaveSurvived_customtext_title" : "Bannière customisée",
+    "WaveSurvived_customtext_title" : "Bannière customisée (WS)",
     "WaveSurvived_customtext_title" : "Customisez le texte sur la bannière de Wave Survived. Seulement compatible avec l'ATH de base, HoloUI et Restoration Mod.",
 
     "WaveSurvived_customtext_1" : "VAGUE SURVÉCU",
@@ -56,5 +56,13 @@
     "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantité de bleu (Format RGB)",
 
     "WaveSurvived_custompanelcolor_website_title" : "Site internet pour les couleurs RVB",
-    "WaveSurvived_custompanelcolor_website_desc" : "Cela ouvrira une page internet qui vous permettra de choisir précisément la couleur RVB que vous voulez. Steam Overlay nécéssaire."
+    "WaveSurvived_custompanelcolor_website_desc" : "Cela ouvrira une page internet qui vous permettra de choisir précisément la couleur RVB que vous voulez. Steam Overlay nécéssaire.",
+
+    "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
+    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+
+    "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
+    "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
+    "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
+    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
 }

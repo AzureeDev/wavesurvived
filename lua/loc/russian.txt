@@ -29,7 +29,7 @@
     "WaveSurvived_duration_25sec" : "25 сек",
     "WaveSurvived_duration_infinite" : "Бесконечная",
  
-    "WaveSurvived_customtext_title" : "Свой баннер",
+    "WaveSurvived_customtext_title" : "Свой баннер (WS)",
     "WaveSurvived_customtext_desc" : "Замените текст баннера Пройденной волны. Совместимо только со стандартным интерфейсом, HoloUI и Restoration Mod.",
 
     "WaveSurvived_customtext_1" : "ВОЛНА ПРОЙДЕНА",
@@ -56,5 +56,13 @@
    	"WaveSurvived_custompanelcolor_customslider_blue_desc" : "Количество синего (RGB формат)",
 
     "WaveSurvived_custompanelcolor_website_title" : "Сайт для RGB цветов",
-    "WaveSurvived_custompanelcolor_website_desc" : "Открывает са, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam."
+    "WaveSurvived_custompanelcolor_website_desc" : "Открывает са, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam.",
+
+    "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
+    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+
+    "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
+    "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
+    "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
+    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
 }
