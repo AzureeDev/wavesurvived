@@ -35,7 +35,7 @@
     "WaveSurvived_customtext_1" : "ONDATA SUPERATA",
     "WaveSurvived_customtext_2" : "SOPRAVVISSUTO",
     "WaveSurvived_customtext_3" : "ASSALTO SUPERATO",
-    "WaveSurvived_customtext_4" : "ASSALTO FINITO",
+    "WaveSurvived_customtext_4" : "ASSALTO TERMINATO",
     "WaveSurvived_customtext_5" : "NON E' ANCORA FINITA!",
  
     "WaveSurvived_custompanelcolor_title" : "Colore Pannello Personalizzato",
@@ -55,14 +55,14 @@
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blu",
     "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantità di blu (Formato RGB)",
 
-    "WaveSurvived_custompanelcolor_website_title" : "Website for RGB colors",
-    "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required.",
+    "WaveSurvived_custompanelcolor_website_title" : "Sito web per i colori RGB",
+    "WaveSurvived_custompanelcolor_website_desc" : "Aprirà un sito web che ti aiuterà a prelevare un colore preciso in formato RGB. È necessario avere l'overlay di Steam abilitato.",
 
-    "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+    "WaveSurvived_endless_customtext_title" : "Banner Personalizzato (OI)",
+    "WaveSurvived_endless_customtext_desc" : "Personalizza il testo del banner Ondata Infinita. Al momento è compatibile solamente con l'impostazione predefinita.",
 
-    "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
-    "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
-    "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
-    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
+    "WaveSurvived_endless_customtext_1" : "ONDATA INFINITA IN CORSO",
+    "WaveSurvived_endless_customtext_2" : "ASSALTO INFINITO IN CORSO",
+    "WaveSurvived_endless_customtext_3" : "ASSALTO INFINITO",
+    "WaveSurvived_endless_customtext_4" : "NON FINIRÀ MAI"
 }
