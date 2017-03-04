@@ -1,4 +1,4 @@
-{
+﻿{
     "WaveSurvived_compatibility_title" : "Опции Пройденных Волн",
     "WaveSurvived_compatibility_desc" : "Изменить совместимость с Пройденными Волнами",
     "WaveSurvived_item_title" : "Совместимость мода",
@@ -9,10 +9,10 @@
     "WaveSurvived_language_english" : "Английский",
     "WaveSurvived_language_french" : "Французский",
     "WaveSurvived_language_russian" : "Русский",
-    "WaveSurvived_language_italian" : "итальянский",
+    "WaveSurvived_language_italian" : "Итальянский",
     "WaveSurvived_language_german" : "Немецкий",
-    "WaveSurvived_language_spanish" : "испанский",
-    "WaveSurvived_language_hungarian" : "Hungarian",
+    "WaveSurvived_language_spanish" : "Испанский",
+    "WaveSurvived_language_hungarian" : "Венгерский",
 
     "WaveSurvived_no_hud" : "Без модифицированного интерфейса",
     "WaveSurvived_holoui" : "HoloUI",
@@ -39,30 +39,30 @@
     "WaveSurvived_customtext_5" : "ЭТО ЕЩЕ НЕ ВСЕ!",
 
     "WaveSurvived_custompanelcolor_title" : "Другой цвет панели",
-   	"WaveSurvived_custompanelcolor_desc" : "Измените цвет панели о Пройденной Волне. Не совместимо с HoloUI.",
+    "WaveSurvived_custompanelcolor_desc" : "Измените цвет панели о Пройденной Волне. Не совместимо с HoloUI.",
 
-   	"WaveSurvived_custompanelcolor_1" : "Лаймовый зеленый (по умолчанию)",
-   	"WaveSurvived_custompanelcolor_2" : "Желтый",
-   	"WaveSurvived_custompanelcolor_3" : "Красный",
-   	"WaveSurvived_custompanelcolor_4" : "Бирюзовый",
-   	"WaveSurvived_custompanelcolor_5" : "Оранжевый",
-   	"WaveSurvived_custompanelcolor_6" : "Свой",
+    "WaveSurvived_custompanelcolor_1" : "Лаймовый зеленый (по умолчанию)",
+    "WaveSurvived_custompanelcolor_2" : "Желтый",
+    "WaveSurvived_custompanelcolor_3" : "Красный",
+    "WaveSurvived_custompanelcolor_4" : "Бирюзовый",
+    "WaveSurvived_custompanelcolor_5" : "Оранжевый",
+    "WaveSurvived_custompanelcolor_6" : "Свой",
 
-   	"WaveSurvived_custompanelcolor_customslider_red_title" : "Красный",
-   	"WaveSurvived_custompanelcolor_customslider_red_desc" : "Количество красного (RGB формат)",
-   	"WaveSurvived_custompanelcolor_customslider_green_title" : "Зеленый",
-   	"WaveSurvived_custompanelcolor_customslider_green_desc" : "Количество зеленого (RGB формат)",
-   	"WaveSurvived_custompanelcolor_customslider_blue_title" : "Синий",
-   	"WaveSurvived_custompanelcolor_customslider_blue_desc" : "Количество синего (RGB формат)",
+    "WaveSurvived_custompanelcolor_customslider_red_title" : "Красный",
+    "WaveSurvived_custompanelcolor_customslider_red_desc" : "Количество красного (RGB формат)",
+    "WaveSurvived_custompanelcolor_customslider_green_title" : "Зеленый",
+    "WaveSurvived_custompanelcolor_customslider_green_desc" : "Количество зеленого (RGB формат)",
+    "WaveSurvived_custompanelcolor_customslider_blue_title" : "Синий",
+    "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Количество синего (RGB формат)",
 
     "WaveSurvived_custompanelcolor_website_title" : "Сайт для RGB цветов",
-    "WaveSurvived_custompanelcolor_website_desc" : "Открывает са, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam.",
+    "WaveSurvived_custompanelcolor_website_desc" : "Открывает сайт, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam.",
 
-    "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+    "WaveSurvived_endless_customtext_title" : "Своя панель (БВ)Custom Banner (EW)",
+    "WaveSurvived_endless_customtext_desc" : "Измените текст панели о Бесконечной Волне. Совместимо только с стандартным интерфейсом.",
 
-    "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
-    "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
-    "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
-    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
+    "WaveSurvived_endless_customtext_1" : "ИДЕТ БЕСКОНЕЧНАЯ ВОЛНА",
+    "WaveSurvived_endless_customtext_2" : "ИДЕТ БЕСКОНЕЧНЫЙ ШТУРМ",
+    "WaveSurvived_endless_customtext_3" : "БЕСКОНЕЧНЫЙ ШТУРМ",
+    "WaveSurvived_endless_customtext_4" : "ЭТО НИКОГДА НЕ ПРЕКРАТИТСЯ"
 }

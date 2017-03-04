@@ -59,7 +59,7 @@
    "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required.",
 
     "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment.",
 
     "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
     "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
