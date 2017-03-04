@@ -58,11 +58,11 @@
     "WaveSurvived_custompanelcolor_website_title" : "Site internet pour les couleurs RVB",
     "WaveSurvived_custompanelcolor_website_desc" : "Cela ouvrira une page internet qui vous permettra de choisir précisément la couleur RVB que vous voulez. Steam Overlay nécéssaire.",
 
-    "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment. EA = Endless Assault, EW = Endless Wave.",
+    "WaveSurvived_endless_customtext_title" : "Bannière personnalisée (ASF)",
+    "WaveSurvived_endless_customtext_desc" : "Customisez le texte de la bannière Assaut Sans Fin. Compatible avec toutes les configurations sauf HoloUI.",
 
-    "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
-    "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
-    "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
-    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
+    "WaveSurvived_endless_customtext_1" : "VAGUE SANS FIN EN COURS",
+    "WaveSurvived_endless_customtext_2" : "ASSAUT SANS FIN EN COURS",
+    "WaveSurvived_endless_customtext_3" : "ASSAUT SANS FIN",
+    "WaveSurvived_endless_customtext_4" : "ÇA NE FINIRA JAMAIS"
 }

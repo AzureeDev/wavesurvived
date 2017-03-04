@@ -22,16 +22,22 @@ if pdth_hud then
 
 	    icon_assaultbox:set_color(color)
 	    control_assault_title:set_color(color)
-	    control_assault_title:set_text(managers.localization:text("menu_assault"))
+	    
+	    if not managers.groupai:state():get_hunt_mode() then
+	    	control_assault_title:set_text(managers.localization:text("menu_assault"))
+	    else
+	    	icon_assaultbox:set_color(Color.black)
+	    	control_assault_title:set_color(Color.white)
+	    	control_assault_title:set_text("ENDLESS")
+	    end
+	    
 	    local const = pdth_hud.constants
-		control_assault_title:set_font_size(const.assault_font_size)
+		control_assault_title:set_font_size(const.assault_font_size - 0.2)
 
 		assault_panel:animate(callback(self, self, "flash_assault_title"), true)
 	end
 
 	function HUDAssaultCorner:_end_assault()
-
-		
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local control_assault_title = assault_panel:child("control_assault_title")
 		local icon_assaultbox = assault_panel:child("icon_assaultbox")

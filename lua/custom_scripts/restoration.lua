@@ -9,24 +9,120 @@ function HUDAssaultCorner:show_point_of_no_return_timer()
 	self._point_of_no_return = true
 end
 
+function HUDAssaultCorner:_get_endless_assault_strings()
+	if WaveSurvived.options["WaveSurvived_endless_customtext"] then
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"WaveSurvived_endless_customtext_" .. WaveSurvived.options["WaveSurvived_endless_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_" .. WaveSurvived.options["WaveSurvived_endless_customtext"],
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"WaveSurvived_endless_customtext_" .. WaveSurvived.options["WaveSurvived_endless_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_" .. WaveSurvived.options["WaveSurvived_endless_customtext"],
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_" .. WaveSurvived.options["WaveSurvived_endless_customtext"],
+				"hud_assault_end_line"
+			}
+		end
+	else
+		if managers.job:current_difficulty_stars() > 0 then
+			local ids_risk = Idstring("risk")
+			return {
+				"WaveSurvived_endless_customtext_1",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_1",
+				"hud_assault_end_line",
+				ids_risk,
+				"hud_assault_end_line"
+			}
+		else
+			return {
+				"WaveSurvived_endless_customtext_1",
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_1",
+				"hud_assault_end_line",
+				"WaveSurvived_endless_customtext_1",
+				"hud_assault_end_line"
+			}
+		end
+	end
+end
+
+function HUDAssaultCorner:sync_start_assault(data)
+	self.endless_color = Color(1, 1, 0, 0)
+	if self._point_of_no_return or self._casing then
+		return
+	end
+	local color = self._assault_color
+	if self._assault_mode == "phalanx" then
+		color = self._vip_assault_color
+	end
+	if managers.groupai:state():get_hunt_mode() then
+		self:_update_assault_hud_color(self.endless_color)
+	else
+		self:_update_assault_hud_color(color)
+	end
+	self._start_assault_after_hostage_offset = true
+	self:_set_hostage_offseted(true)
+end
+
+function HUDAssaultCorner:_update_hud_endless_assault()
+	if managers.groupai:state():get_hunt_mode() then
+		self.endless_color = Color(1, 1, 0, 0)
+		
+		if self._assault then
+		return end
+
+		text_list = text_list or {""}
+		local assault_panel = self._hud_panel:child("assault_panel")
+		local text_panel = assault_panel:child("text_panel")
+		self:_set_text_list(text_list)
+		self._assault = true
+		self._hud_panel:child("assault_panel"):child("text_panel"):stop()
+		self._hud_panel:child("assault_panel"):child("text_panel"):clear()
+		assault_panel:set_visible(true)
+		text_panel:stop()
+		assault_panel:stop()
+		assault_panel:animate(callback(self, self, "_animate_assault"))
+		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
+		self:_set_feedback_color(self.endless_color)
+		self:_update_assault_hud_color(self.endless_color)
+		self:_set_text_list(self._get_endless_assault_strings())
+	end
+end
 
 function HUDAssaultCorner:_start_assault(text_list)
-	if self._assault then
-	return end
-	text_list = text_list or {""}
-	local assault_panel = self._hud_panel:child("assault_panel")
-	local text_panel = assault_panel:child("text_panel")
-	self:_set_text_list(text_list)
-	self._assault = true
-	self._hud_panel:child("assault_panel"):child("text_panel"):stop()
-	self._hud_panel:child("assault_panel"):child("text_panel"):clear()
-	assault_panel:set_visible(true)
-	text_panel:stop()
-	assault_panel:stop()
-	assault_panel:animate(callback(self, self, "_animate_assault"))
-	text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
-	self:_set_feedback_color(self._assault_color)
-
+	if managers.groupai:state():get_hunt_mode() then
+		self:_update_hud_endless_assault()
+	end
+	if not managers.groupai:state():get_hunt_mode() then
+		if self._assault then
+		return end
+		text_list = text_list or {""}
+		local assault_panel = self._hud_panel:child("assault_panel")
+		local text_panel = assault_panel:child("text_panel")
+		self:_set_text_list(text_list)
+		self._assault = true
+		self._hud_panel:child("assault_panel"):child("text_panel"):stop()
+		self._hud_panel:child("assault_panel"):child("text_panel"):clear()
+		assault_panel:set_visible(true)
+		text_panel:stop()
+		assault_panel:stop()
+		assault_panel:animate(callback(self, self, "_animate_assault"))
+		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
+		self:_set_feedback_color(self._assault_color)
+	end
 end
 
 function HUDAssaultCorner:_get_survived_assault_strings()

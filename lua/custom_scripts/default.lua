@@ -61,7 +61,6 @@ end
 
 function HUDAssaultCorner:_update_hud_endless_assault()
 	if managers.groupai:state():get_hunt_mode() then
-		self.prevent_normal_assault_update = true
 		self.endless_color = Color(1, 1, 0, 0)
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local text_panel = assault_panel:child("text_panel")
@@ -95,8 +94,6 @@ function HUDAssaultCorner:_update_hud_endless_assault()
 			self._wave_bg_box:stop()
 			self._wave_bg_box:animate(callback(self, self, "_animate_wave_started"), self)
 		end
-	else
-		self.prevent_normal_assault_update = false
 	end
 end
 
