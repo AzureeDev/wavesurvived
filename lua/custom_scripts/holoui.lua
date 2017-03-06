@@ -75,7 +75,7 @@ function HUDAssaultCorner:_end_assault()
  	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
  	icon_assaultbox:stop()
 
-		self:_update_assault_hud_color(self._assault_survived_color)
+		self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
 		self:_set_text_list(self:_get_survived_assault_strings())
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
 		icon_assaultbox:stop()
