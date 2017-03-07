@@ -27,6 +27,19 @@
 			"size" : 20
 		},
 		{
+		    "type" : "toggle",
+		    "id" : "WaveSurvived_enable_checks",
+		    "title" : "WaveSurvived_enable_checks_title",
+		    "description" : "WaveSurvived_enable_checks_desc",
+		    "callback" : "WaveSurvived_enable_checks_callback",
+		    "value" : "WaveSurvived_enable_checks_value",
+		    "default_value" : true,
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
 			"type" : "multiple_choice",
 			"id" : "WaveSurvived_compatibility_choice",
 			"title" : "WaveSurvived_item_title",
@@ -145,6 +158,63 @@
 		    "description" : "WaveSurvived_custompanelcolor_customslider_blue_desc",
 		    "callback" : "WaveSurvived_custompanelcolor_customslider_blue_callback",
 		    "value" : "WaveSurvived_custompanelcolor_customslider_blue",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
+			"type" : "multiple_choice",
+			"id" : "WaveSurvived_custompanelcolor_endless_choice",
+			"title" : "WaveSurvived_custompanelcolor_endless_title",
+			"description" : "WaveSurvived_custompanelcolor_endless_desc",
+			"callback" : "WaveSurvived_custompanelcolor_endless_callback",
+			"items" : [
+				"WaveSurvived_custompanelcolor_endless_1",
+				"WaveSurvived_custompanelcolor_endless_2",
+				"WaveSurvived_custompanelcolor_endless_3",
+				"WaveSurvived_custompanelcolor_endless_4",
+				"WaveSurvived_custompanelcolor_endless_5",
+				"WaveSurvived_custompanelcolor_endless_6"
+			],
+			"value" : "WaveSurvived_custompanelcolor_endless",
+			"default_value" : 1,
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_endless_customslider_red_choice",
+		    "title" : "WaveSurvived_custompanelcolor_endless_customslider_red_title",
+		    "description" : "WaveSurvived_custompanelcolor_endless_customslider_red_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_endless_customslider_red_callback",
+		    "value" : "WaveSurvived_custompanelcolor_endless_customslider_red",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_endless_customslider_green_choice",
+		    "title" : "WaveSurvived_custompanelcolor_endless_customslider_green_title",
+		    "description" : "WaveSurvived_custompanelcolor_endless_customslider_green_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_endless_customslider_green_callback",
+		    "value" : "WaveSurvived_custompanelcolor_endless_customslider_green",
+		    "default_value" : 0,
+		    "max" : 255,
+		    "min" : 0,
+		    "step" : 1
+		},
+		{
+		    "type" : "slider",
+		    "id" : "WaveSurvived_custompanelcolor_endless_customslider_blue_choice",
+		    "title" : "WaveSurvived_custompanelcolor_endless_customslider_blue_title",
+		    "description" : "WaveSurvived_custompanelcolor_endless_customslider_blue_desc",
+		    "callback" : "WaveSurvived_custompanelcolor_endless_customslider_blue_callback",
+		    "value" : "WaveSurvived_custompanelcolor_endless_customslider_blue",
 		    "default_value" : 0,
 		    "max" : 255,
 		    "min" : 0,

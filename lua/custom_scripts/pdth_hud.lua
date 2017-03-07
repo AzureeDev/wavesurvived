@@ -26,8 +26,29 @@ if pdth_hud then
 	    if not managers.groupai:state():get_hunt_mode() then
 	    	control_assault_title:set_text(managers.localization:text("menu_assault"))
 	    else
-	    	icon_assaultbox:set_color(Color.black)
-	    	control_assault_title:set_color(Color.white)
+	    	if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
+	    		icon_assaultbox:set_color(Color(255, 255, 0, 0) / 255)
+	    		control_assault_title:set_color(Color(255, 255, 0, 0) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
+		 		icon_assaultbox:set_color(Color(255, 255, 255, 0) / 255)
+	    		control_assault_title:set_color(Color(255, 255, 255, 0) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
+		 		icon_assaultbox:set_color(Color(255, 32, 230, 32) / 255)
+	    		control_assault_title:set_color(Color(255, 32, 230, 32) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
+		 		icon_assaultbox:set_color(Color(255, 0, 255, 255) / 255)
+	    		control_assault_title:set_color(Color(255, 0, 255, 255) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
+		 		icon_assaultbox:set_color(Color(255, 255, 127, 80) / 255)
+	    		control_assault_title:set_color(Color(255, 255, 127, 80) / 255)
+		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
+		 		icon_assaultbox:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
+	    		control_assault_title:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
+		 	else	
+				icon_assaultbox:set_color(Color.black)
+	    		control_assault_title:set_color(Color.white)
+		 	end
+
 	    	control_assault_title:set_text("ENDLESS")
 	    end
 	    

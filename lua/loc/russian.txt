@@ -55,6 +55,23 @@
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Синий",
     "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Количество синего (RGB формат)",
 
+    "WaveSurvived_custompanelcolor_endless_title" : "Custom Color (EW)",
+    "WaveSurvived_custompanelcolor_endless_desc" : "Customize the Endless Wave panel color.",
+
+    "WaveSurvived_custompanelcolor_endless_1" : "Red (default)",
+    "WaveSurvived_custompanelcolor_endless_2" : "Yellow",
+    "WaveSurvived_custompanelcolor_endless_3" : "Green lime",
+    "WaveSurvived_custompanelcolor_endless_4" : "Cyan",
+    "WaveSurvived_custompanelcolor_endless_5" : "Orange",
+    "WaveSurvived_custompanelcolor_endless_6" : "Custom",
+
+    "WaveSurvived_custompanelcolor_endless_customslider_red_title" : "Red (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_red_desc" : "Amount of red for Endless Wave (RGB Format)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_title" : "Green (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_desc" : "Amount of green for Endless Wave (RGB Format)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_title" : "Blue (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_desc" : "Amount of blue for Endless Wave (RGB Format)",
+
     "WaveSurvived_custompanelcolor_website_title" : "Сайт для RGB цветов",
     "WaveSurvived_custompanelcolor_website_desc" : "Открывает сайт, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam.",
 
@@ -68,5 +85,8 @@
 
     "WaveSurvived_alert_compatibility_title" : "Wave Survived : Compatibility Alert",
     "WaveSurvived_alert_compatibility_message" : "It seems you are using the wrong compatibility in the mod options, or it's the first time you launch the game with this mod.\n\nWave Survived compatibility settings has been changed.",
-    "WaveSurvived_alert_compatibility_button_ok" : "OK"
+    "WaveSurvived_alert_compatibility_button_ok" : "OK",
+
+    "WaveSurvived_enable_checks_title" : "Enable auto-checks",
+    "WaveSurvived_enable_checks_desc" : "Tick to automatically change your HUD compatibility when it's needed at the startup."
 }

@@ -55,6 +55,23 @@
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blu",
     "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantità di blu (Formato RGB)",
 
+    "WaveSurvived_custompanelcolor_endless_title" : "Colori Personalizzati (OI)",
+    "WaveSurvived_custompanelcolor_endless_desc" : "Personalizza i colori del banner Ondata Infinita.",
+
+    "WaveSurvived_custompanelcolor_endless_1" : "Rosso (predefinito)",
+    "WaveSurvived_custompanelcolor_endless_2" : "Giallo",
+    "WaveSurvived_custompanelcolor_endless_3" : "Verde lime",
+    "WaveSurvived_custompanelcolor_endless_4" : "Ciano",
+    "WaveSurvived_custompanelcolor_endless_5" : "Arancione",
+    "WaveSurvived_custompanelcolor_endless_6" : "Personalizzato",
+
+    "WaveSurvived_custompanelcolor_endless_customslider_red_title" : "Rosso (OI)",
+    "WaveSurvived_custompanelcolor_endless_customslider_red_desc" : "Quantità di rosso per Ondata Infinita (Formato RGB)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_title" : "Verde (OI)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_desc" : "Quantità di verde per Ondata Infinita (Formato RGB)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_title" : "Blu (OI)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_desc" : "Quantità di blu per Ondata Infinita (Formato RGB)",
+
     "WaveSurvived_custompanelcolor_website_title" : "Sito web per i colori RGB",
     "WaveSurvived_custompanelcolor_website_desc" : "Aprirà un sito web che ti aiuterà a prelevare un colore preciso in formato RGB. È necessario avere l'overlay di Steam abilitato.",
 
@@ -69,4 +86,7 @@
     "WaveSurvived_alert_compatibility_title" : "Wave Survived : Avviso di Compatibilità",
     "WaveSurvived_alert_compatibility_message" : "Sembra che tu stia utilizzando l'opzione di compatibilità sbagliata, oppure è la prima che avvii il gioco con questa mod.\n\nLe opzioni di compatibilità di Wave Survived sono state cambiate.",
     "WaveSurvived_alert_compatibility_button_ok" : "OK"
+
+    "WaveSurvived_enable_checks_title" : "Attiva controlli automatici",
+    "WaveSurvived_enable_checks_desc" : "Spunta per cambiare le opzioni di compatibilità automaticamente all'avvio ogni qualvolta sarà necessario."
 }

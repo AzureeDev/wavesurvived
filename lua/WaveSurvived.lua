@@ -43,6 +43,11 @@ function WaveSurvived:LoadCustomScript(name)
 	return dofile(ModPath .. "/custom_scripts/" .. name .. ".lua")
 end
 
+MenuCallbackHandler.WaveSurvived_enable_checks_callback = function(self, item)
+	WaveSurvived.options.WaveSurvived_enable_checks_value = (item:value() == "on" and true or false)
+	WaveSurvived:Save()
+end
+
 MenuCallbackHandler.WaveSurvived_compatibility_callback = function(self, item)
 	
 	WaveSurvived.options.WaveSurvived_compatibility = item:value()
@@ -103,6 +108,31 @@ end
 MenuCallbackHandler.WaveSurvived_custompanelcolor_customslider_blue_callback = function(self, item)
 	
 	WaveSurvived.options.WaveSurvived_custompanelcolor_customslider_blue = item:value()
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_callback = function(self, item)
+		
+	WaveSurvived.options.WaveSurvived_custompanelcolor_endless = item:value()
+	log("[EndlessWave] Custom color : " .. WaveSurvived.options.WaveSurvived_custompanelcolor_endless)
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_red_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_red = item:value()
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_green_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_green = item:value()
+	WaveSurvived:Save()
+end
+
+MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_blue_callback = function(self, item)
+	
+	WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_blue = item:value()
 	WaveSurvived:Save()
 end
 

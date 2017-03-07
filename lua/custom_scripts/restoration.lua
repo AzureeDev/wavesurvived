@@ -69,7 +69,21 @@ function HUDAssaultCorner:sync_start_assault(data)
 		color = self._vip_assault_color
 	end
 	if managers.groupai:state():get_hunt_mode() then
-		self:_update_assault_hud_color(self.endless_color)
+		if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
+			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
+			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
+			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
+			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
+			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
+			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
+	 	else	
+			self:_update_assault_hud_color(self.endless_color)
+	 	end
 	else
 		self:_update_assault_hud_color(color)
 	end
@@ -97,7 +111,23 @@ function HUDAssaultCorner:_update_hud_endless_assault()
 		assault_panel:animate(callback(self, self, "_animate_assault"))
 		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 		self:_set_feedback_color(self.endless_color)
-		self:_update_assault_hud_color(self.endless_color)
+		
+		if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
+			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
+			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
+			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
+			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
+			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
+			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
+	 	else	
+			self:_update_assault_hud_color(self.endless_color)
+	 	end
+		
 		self:_set_text_list(self._get_endless_assault_strings())
 	end
 end
