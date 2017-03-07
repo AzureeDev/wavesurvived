@@ -55,6 +55,23 @@
     "WaveSurvived_custompanelcolor_customslider_blue_title" : "Blu",
     "WaveSurvived_custompanelcolor_customslider_blue_desc" : "Quantità di blu (Formato RGB)",
 
+    "WaveSurvived_custompanelcolor_endless_title" : "Custom Color (EW)",
+    "WaveSurvived_custompanelcolor_endless_desc" : "Customize the Endless Wave panel color.",
+
+    "WaveSurvived_custompanelcolor_endless_1" : "Red (default)",
+    "WaveSurvived_custompanelcolor_endless_2" : "Yellow",
+    "WaveSurvived_custompanelcolor_endless_3" : "Green lime",
+    "WaveSurvived_custompanelcolor_endless_4" : "Cyan",
+    "WaveSurvived_custompanelcolor_endless_5" : "Orange",
+    "WaveSurvived_custompanelcolor_endless_6" : "Custom",
+
+    "WaveSurvived_custompanelcolor_endless_customslider_red_title" : "Red (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_red_desc" : "Amount of red for Endless Wave (RGB Format)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_title" : "Green (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_green_desc" : "Amount of green for Endless Wave (RGB Format)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_title" : "Blue (EW)",
+    "WaveSurvived_custompanelcolor_endless_customslider_blue_desc" : "Amount of blue for Endless Wave (RGB Format)",
+
     "WaveSurvived_custompanelcolor_website_title" : "Website for RGB colors",
     "WaveSurvived_custompanelcolor_website_desc" : "This will open a website to help you picking a precise color in RGB format. Steam overlay enabled required.",
 

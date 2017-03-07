@@ -101,6 +101,31 @@ end
 		WaveSurvived:Save()
 	end
 
+	MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_custompanelcolor_endless = item:value()
+		log("[EndlessWave] Custom color : " .. WaveSurvived.options.WaveSurvived_custompanelcolor_endless)
+		WaveSurvived:Save()
+	end
+
+	MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_red_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_red = item:value()
+		WaveSurvived:Save()
+	end
+
+	MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_green_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_green = item:value()
+		WaveSurvived:Save()
+	end
+
+	MenuCallbackHandler.WaveSurvived_custompanelcolor_endless_customslider_blue_callback = function(self, item)
+		
+		WaveSurvived.options.WaveSurvived_custompanelcolor_endless_customslider_blue = item:value()
+		WaveSurvived:Save()
+	end
+
 	MenuCallbackHandler.WaveSurvived_custompanelcolor_website_callback = function(self, item)
 		Steam:overlay_activate("url", "http://www.rapidtables.com/web/color/RGB_Color.htm")
 	end

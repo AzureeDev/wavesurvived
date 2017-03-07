@@ -88,8 +88,24 @@ function HUDAssaultCorner:_update_hud_endless_assault()
 		local box_text_panel = self._bg_box:child("text_panel")
 		box_text_panel:stop()
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
-		self:_set_feedback_color(self.endless_color)
-		self:_update_assault_hud_color(self.endless_color)
+		self:_set_feedback_color(nil)
+
+		if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
+			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
+			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
+			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
+			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
+			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
+			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
+	 	else	
+			self:_update_assault_hud_color(self.endless_color)
+	 	end
+
 		if alive(self._wave_bg_box) then
 			self._wave_bg_box:stop()
 			self._wave_bg_box:animate(callback(self, self, "_animate_wave_started"), self)
