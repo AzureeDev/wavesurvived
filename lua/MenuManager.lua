@@ -39,7 +39,6 @@ function WaveSurvived:Save()
 	end
 end
 
-
 	MenuCallbackHandler.WaveSurvived_compatibility_callback = function(self, item)
 		
 		WaveSurvived.options.WaveSurvived_compatibility = item:value()

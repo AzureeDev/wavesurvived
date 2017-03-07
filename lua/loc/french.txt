@@ -59,10 +59,14 @@
     "WaveSurvived_custompanelcolor_website_desc" : "Cela ouvrira une page internet qui vous permettra de choisir précisément la couleur RVB que vous voulez. Steam Overlay nécéssaire.",
 
     "WaveSurvived_endless_customtext_title" : "Bannière personnalisée (ASF)",
-    "WaveSurvived_endless_customtext_desc" : "Customisez le texte de la bannière Assaut Sans Fin. Compatible avec toutes les configurations sauf HoloUI.",
+    "WaveSurvived_endless_customtext_desc" : "Customisez le texte de la bannière Assaut Sans Fin.",
 
     "WaveSurvived_endless_customtext_1" : "VAGUE SANS FIN EN COURS",
     "WaveSurvived_endless_customtext_2" : "ASSAUT SANS FIN EN COURS",
     "WaveSurvived_endless_customtext_3" : "ASSAUT SANS FIN",
-    "WaveSurvived_endless_customtext_4" : "ÇA NE FINIRA JAMAIS"
+    "WaveSurvived_endless_customtext_4" : "ÇA NE FINIRA JAMAIS",
+
+    "WaveSurvived_alert_compatibility_title" : "Wave Survived : Compatibility Alert",
+    "WaveSurvived_alert_compatibility_message" : "It seems you are using the wrong compatibility in the mod options, or it's the first time you launch the game with this mod.\n\nWave Survived compatibility settings has been changed.",
+    "WaveSurvived_alert_compatibility_button_ok" : "OK"
 }
