@@ -76,7 +76,7 @@ Hooks:Add("MenuManagerOnOpenMenu", "WaveSurvived_Alert_Compatibility", function(
 					WaveSurvived.options.WaveSurvived_compatibility = hud_number
 					log("[WaveSurvived] Auto-changed the HUD : " .. WaveSurvived.options.WaveSurvived_compatibility)
 					WaveSurvived:Save()
-				elseif not Holo.Options:GetValue("HudBox") and Holo:ShouldModify("Hud", "HudAssault") and WaveSurvived.options["WaveSurvived_compatibility"] ~= 1 then
+				elseif not Holo.Options:GetValue("HudBox") and not Holo:ShouldModify("Hud", "HudAssault") and WaveSurvived.options["WaveSurvived_compatibility"] ~= 1 then
 					WaveSurvived:Compatibility_Alert_Message()
 					local hud_number = 1
 					WaveSurvived.options.WaveSurvived_compatibility = hud_number
@@ -94,7 +94,9 @@ Hooks:Add("MenuManagerOnOpenMenu", "WaveSurvived_Alert_Compatibility", function(
 			end
 		end
 
-		WaveSurvived:Compatibility_Alert_Check()
+		if WaveSurvived.options["WaveSurvived_enable_checks_value"] ~= false then
+			WaveSurvived:Compatibility_Alert_Check()
+		end
 	end
 end)
 

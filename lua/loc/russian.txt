@@ -85,5 +85,8 @@
 
     "WaveSurvived_alert_compatibility_title" : "Wave Survived : Compatibility Alert",
     "WaveSurvived_alert_compatibility_message" : "It seems you are using the wrong compatibility in the mod options, or it's the first time you launch the game with this mod.\n\nWave Survived compatibility settings has been changed.",
-    "WaveSurvived_alert_compatibility_button_ok" : "OK"
+    "WaveSurvived_alert_compatibility_button_ok" : "OK",
+
+    "WaveSurvived_enable_checks_title" : "Enable auto-checks",
+    "WaveSurvived_enable_checks_desc" : "Tick to automatically change your HUD compatibility when it's needed at the startup."
 }

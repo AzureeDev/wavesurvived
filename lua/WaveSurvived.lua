@@ -43,6 +43,11 @@ function WaveSurvived:LoadCustomScript(name)
 	return dofile(ModPath .. "/custom_scripts/" .. name .. ".lua")
 end
 
+MenuCallbackHandler.WaveSurvived_enable_checks_callback = function(self, item)
+	WaveSurvived.options.WaveSurvived_enable_checks_value = (item:value() == "on" and true or false)
+	WaveSurvived:Save()
+end
+
 MenuCallbackHandler.WaveSurvived_compatibility_callback = function(self, item)
 	
 	WaveSurvived.options.WaveSurvived_compatibility = item:value()

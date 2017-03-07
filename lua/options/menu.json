@@ -27,6 +27,19 @@
 			"size" : 20
 		},
 		{
+		    "type" : "toggle",
+		    "id" : "WaveSurvived_enable_checks",
+		    "title" : "WaveSurvived_enable_checks_title",
+		    "description" : "WaveSurvived_enable_checks_desc",
+		    "callback" : "WaveSurvived_enable_checks_callback",
+		    "value" : "WaveSurvived_enable_checks_value",
+		    "default_value" : true,
+		},
+		{
+			"type" : "divider",
+			"size" : 20
+		},
+		{
 			"type" : "multiple_choice",
 			"id" : "WaveSurvived_compatibility_choice",
 			"title" : "WaveSurvived_item_title",
