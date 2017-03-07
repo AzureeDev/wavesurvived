@@ -1,4 +1,4 @@
-﻿{
+{
     "WaveSurvived_compatibility_title" : "Опции Пройденных Волн",
     "WaveSurvived_compatibility_desc" : "Изменить совместимость с Пройденными Волнами",
     "WaveSurvived_item_title" : "Совместимость мода",
@@ -47,7 +47,7 @@
     "WaveSurvived_custompanelcolor_4" : "Бирюзовый",
     "WaveSurvived_custompanelcolor_5" : "Оранжевый",
     "WaveSurvived_custompanelcolor_6" : "Свой",
-
+    
     "WaveSurvived_custompanelcolor_customslider_red_title" : "Красный",
     "WaveSurvived_custompanelcolor_customslider_red_desc" : "Количество красного (RGB формат)",
     "WaveSurvived_custompanelcolor_customslider_green_title" : "Зеленый",
@@ -59,10 +59,14 @@
     "WaveSurvived_custompanelcolor_website_desc" : "Открывает сайт, чтобы помочь вам выбрать точный цвет в RGB формате. Необходим оверлей Steam.",
 
     "WaveSurvived_endless_customtext_title" : "Своя панель (БВ)Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Измените текст панели о Бесконечной Волне. Совместимо только с стандартным интерфейсом.",
+    "WaveSurvived_endless_customtext_desc" : "Измените текст панели о Бесконечной Волне.",
 
     "WaveSurvived_endless_customtext_1" : "ИДЕТ БЕСКОНЕЧНАЯ ВОЛНА",
     "WaveSurvived_endless_customtext_2" : "ИДЕТ БЕСКОНЕЧНЫЙ ШТУРМ",
     "WaveSurvived_endless_customtext_3" : "БЕСКОНЕЧНЫЙ ШТУРМ",
-    "WaveSurvived_endless_customtext_4" : "ЭТО НИКОГДА НЕ ПРЕКРАТИТСЯ"
+    "WaveSurvived_endless_customtext_4" : "ЭТО НИКОГДА НЕ ПРЕКРАТИТСЯ",
+
+    "WaveSurvived_alert_compatibility_title" : "Wave Survived : Compatibility Alert",
+    "WaveSurvived_alert_compatibility_message" : "It seems you are using the wrong compatibility in the mod options, or it's the first time you launch the game with this mod.\n\nWave Survived compatibility settings has been changed.",
+    "WaveSurvived_alert_compatibility_button_ok" : "OK"
 }

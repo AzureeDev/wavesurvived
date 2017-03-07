@@ -190,7 +190,7 @@ function HUDAssaultCorner:_end_assault()
 	if self:is_safehouse_raid() then
 		self._raid_finised = false
 		wave_panel = self._hud_panel:child("wave_panel")
-		self:_update_assault_hud_color(color_survived)
+		self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
 		self:_set_text_list(self:_get_survived_assault_strings())
 		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 		self._completed_waves = self._completed_waves + 1

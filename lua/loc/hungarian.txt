@@ -59,10 +59,14 @@
     "WaveSurvived_custompanelcolor_website_desc" : "weblapot nyit meg, itt tudod egyénileg ki választani a szint amit szeretnél",
 
     "WaveSurvived_endless_customtext_title" : "Custom Banner (EW)",
-    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner. Only compatible with the default setup at the moment.",
+    "WaveSurvived_endless_customtext_desc" : "Customize the text of the Endless Wave banner.",
 
     "WaveSurvived_endless_customtext_1" : "ENDLESS WAVE IN PROGRESS",
     "WaveSurvived_endless_customtext_2" : "ENDLESS ASSAULT IN PROGRESS",
     "WaveSurvived_endless_customtext_3" : "ENDLESS ASSAULT",
-    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END"
+    "WaveSurvived_endless_customtext_4" : "THIS WILL NEVER END",
+
+    "WaveSurvived_alert_compatibility_title" : "Wave Survived : Compatibility Alert",
+    "WaveSurvived_alert_compatibility_message" : "It seems you are using the wrong compatibility in the mod options, or it's the first time you launch the game with this mod.\n\nWave Survived compatibility settings has been changed.",
+    "WaveSurvived_alert_compatibility_button_ok" : "OK"
 }

@@ -65,4 +65,8 @@
     "WaveSurvived_endless_customtext_2" : "ASSALTO INFINITO IN CORSO",
     "WaveSurvived_endless_customtext_3" : "ASSALTO INFINITO",
     "WaveSurvived_endless_customtext_4" : "NON FINIRÀ MAI"
+
+    "WaveSurvived_alert_compatibility_title" : "Wave Survived : Avviso di Compatibilità",
+    "WaveSurvived_alert_compatibility_message" : "Sembra che tu stia utilizzando l'opzione di compatibilità sbagliata, oppure è la prima che avvii il gioco con questa mod.\n\nLe opzioni di compatibilità di Wave Survived sono state cambiate.",
+    "WaveSurvived_alert_compatibility_button_ok" : "OK"
 }
