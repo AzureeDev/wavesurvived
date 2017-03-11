@@ -3,11 +3,11 @@
     "description" : "Add the Wave Survived banner into all heists. Also adds a endless wave banner.",
     "author" : "Nepgearsy",
     "contact" : "http://steamcommunity.com/id/Nepgearsy",
-    "version" : "1.20a",
+    "version" : "1.20b",
     "priority" : 1,
     "updates" : [
     {
-        "revision" : 22,
+        "revision" : 23,
         "identifier" : "wavesurvived",
     }
     ],

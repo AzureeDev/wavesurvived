@@ -54,7 +54,7 @@ if pdth_hud then
 	    
 	    local const = pdth_hud.constants
 		control_assault_title:set_font_size(const.assault_font_size - 0.2)
-
+		control_assault_title:set_center_x(icon_assaultbox:center_x())
 		assault_panel:animate(callback(self, self, "flash_assault_title"), true)
 	end
 
@@ -71,6 +71,7 @@ if pdth_hud then
 
 		local const = pdth_hud.constants
 		control_assault_title:set_font_size(const.assault_font_size - 3.5)
+		control_assault_title:set_center_x(icon_assaultbox:center_x())
 		control_assault_title:set_text("SURVIVED")
 
 	    if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
