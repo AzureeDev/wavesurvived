@@ -13,6 +13,7 @@
     "WaveSurvived_language_german" : "German",
     "WaveSurvived_language_spanish" : "Spanish",
     "WaveSurvived_language_hungarian" : "Hungarian",
+    "WaveSurvived_language_korean" : "Korean",
 
     "WaveSurvived_no_hud" : "No custom HUD",
     "WaveSurvived_holoui" : "HoloUI",

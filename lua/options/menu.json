@@ -17,7 +17,8 @@
 				"WaveSurvived_language_italian",
 				"WaveSurvived_language_german",
 				"WaveSurvived_language_spanish",
-				"WaveSurvived_language_hungarian"
+				"WaveSurvived_language_hungarian",
+				"WaveSurvived_language_korean"
 			],
 			"value" : "WaveSurvived_language",
 			"default_value" : 1,

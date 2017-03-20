@@ -1,3 +1,10 @@
+local Net = _G.LuaNetworking
+local data_sender = false
+
+if Net:IsHost() then
+	data_sender = true
+end
+
 function HUDAssaultCorner:show_point_of_no_return_timer()
 	local delay_time = self._assault and 1.2 or 0
 	self:_close_assault_box()
@@ -135,6 +142,9 @@ end
 function HUDAssaultCorner:_start_assault(text_list)
 	if managers.groupai:state():get_hunt_mode() then
 		self:_update_hud_endless_assault()
+		if data_sender then
+			Net:SendToPeers( "WaveSurvived_Net", "endless" )
+		end
 	end
 	if not managers.groupai:state():get_hunt_mode() then
 		if self._assault then

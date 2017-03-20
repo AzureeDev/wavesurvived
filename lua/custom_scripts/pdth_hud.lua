@@ -1,6 +1,13 @@
 if pdth_hud then
 	log("[WaveSurvived] Loaded custom script pdth_hud.lua")
 
+	local Net = _G.LuaNetworking
+	local data_sender = false
+
+	if Net:IsHost() then
+		data_sender = true
+	end
+
 	function HUDAssaultCorner:_start_assault()
 		local assault_panel = self._hud_panel:child("assault_panel")
 		local control_assault_title = assault_panel:child("control_assault_title")
@@ -26,6 +33,9 @@ if pdth_hud then
 	    if not managers.groupai:state():get_hunt_mode() then
 	    	control_assault_title:set_text(managers.localization:text("menu_assault"))
 	    else
+	    	if data_sender then
+				Net:SendToPeers( "WaveSurvived_Net", "endless" )
+			end
 	    	if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
 	    		icon_assaultbox:set_color(Color(255, 255, 0, 0) / 255)
 	    		control_assault_title:set_color(Color(255, 255, 0, 0) / 255)
@@ -54,7 +64,6 @@ if pdth_hud then
 	    
 	    local const = pdth_hud.constants
 		control_assault_title:set_font_size(const.assault_font_size - 0.2)
-		control_assault_title:set_center_x(icon_assaultbox:center_x())
 		assault_panel:animate(callback(self, self, "flash_assault_title"), true)
 	end
 
@@ -70,8 +79,7 @@ if pdth_hud then
 		self._assault = false
 
 		local const = pdth_hud.constants
-		control_assault_title:set_font_size(const.assault_font_size - 3.5)
-		control_assault_title:set_center_x(icon_assaultbox:center_x())
+		control_assault_title:set_font_size(const.assault_font_size - 2)
 		control_assault_title:set_text("SURVIVED")
 
 	    if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then

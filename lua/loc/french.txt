@@ -13,6 +13,7 @@
     "WaveSurvived_language_german" : "Allemand",
     "WaveSurvived_language_spanish" : "Espagnol",
     "WaveSurvived_language_hungarian" : "Hongrois",
+    "WaveSurvived_language_korean" : "Korean",
 
     "WaveSurvived_no_hud" : "Aucun ATH moddé",
     "WaveSurvived_holoui" : "HoloUI",

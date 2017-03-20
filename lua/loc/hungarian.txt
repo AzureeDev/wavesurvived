@@ -13,6 +13,7 @@
     "WaveSurvived_language_german" : "Német",
     "WaveSurvived_language_spanish" : "Spanyol",
 	"WaveSurvived_language_hungarian" : "Magyar",
+    "WaveSurvived_language_korean" : "Korean",
 
     "WaveSurvived_no_hud" : "Nincsen egyéni HUD (alapértelmezett)",
     "WaveSurvived_holoui" : "HoloUI",
