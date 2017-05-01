@@ -100,7 +100,7 @@ Hooks:Add("MenuManagerOnOpenMenu", "WaveSurvived_Alert_Compatibility", function(
 	end
 end)
 
-if not _G.PPSaving then
+if not _G.WaveSurvived then
 	local success, err = pcall(function() WaveSurvivedCore:new() end)
 	if not success then
 		log("[ERROR] An error occured on the initialization of WaveSurvived. " .. tostring(err))

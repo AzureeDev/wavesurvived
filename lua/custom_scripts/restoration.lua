@@ -99,7 +99,7 @@ function HUDAssaultCorner:sync_start_assault(data)
 end
 
 function HUDAssaultCorner:_update_hud_endless_assault()
-	if managers.groupai:state():get_hunt_mode() then
+	if managers.groupai:state():get_hunt_mode() and self._assault_mode ~= "phalanx" then
 		self.endless_color = Color(1, 1, 0, 0)
 		
 		if self._assault then
@@ -140,7 +140,7 @@ function HUDAssaultCorner:_update_hud_endless_assault()
 end
 
 function HUDAssaultCorner:_start_assault(text_list)
-	if managers.groupai:state():get_hunt_mode() then
+	if managers.groupai:state():get_hunt_mode() and self._assault_mode ~= "phalanx" then
 		self:_update_hud_endless_assault()
 		if data_sender then
 			Net:SendToPeers( "WaveSurvived_Net", "endless" )
@@ -215,6 +215,40 @@ function HUDAssaultCorner:_get_survived_assault_strings()
 	end
 end
 
+function HUDAssaultCorner:_check_snh20_assault_corner_difficulty_names()
+	if SystemFS:exists("mods/AssaultCornerDifficultyNames/mod.txt") then
+		return true
+	end
+
+	return false
+end
+
+function HUDAssaultCorner:_get_survived_assault_strings_snh()
+	-- Code by Snh20
+	local minskulls = 0
+	local ids_risk = Idstring("risk")
+	local _get_survived_assault_strings_actual = HUDAssaultCorner._get_survived_assault_strings
+
+	local strings = _get_survived_assault_strings_actual(self)
+
+	if strings == nil or #strings < 1 or managers.job:current_difficulty_stars() < minskulls then
+		return strings
+	end
+
+	local difficulty_name_id = tweak_data ~= nil and tweak_data.difficulty_name_id or nil
+	if not difficulty_name_id then
+		return strings
+	end
+
+	for index, data in ipairs(strings) do
+		if type(data) == "userdata" and data == ids_risk then
+			strings[index] = difficulty_name_id
+		end
+	end
+
+	return strings
+end
+
 function HUDAssaultCorner:_end_assault()
 	if not self._assault then
 		self._start_assault_after_hostage_offset = nil
@@ -231,7 +265,11 @@ function HUDAssaultCorner:_end_assault()
 		self._raid_finised = false
 		wave_panel = self._hud_panel:child("wave_panel")
 		self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
-		self:_set_text_list(self:_get_survived_assault_strings())
+		if not self:_check_snh20_assault_corner_difficulty_names() then
+			self:_set_text_list(self:_get_survived_assault_strings())
+		else
+			self:_set_text_list(self:_get_survived_assault_strings_snh())
+		end
 		text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 		self._completed_waves = self._completed_waves + 1
 		wave_panel:animate(callback(self, self, "_animate_wave_completed"), self)
@@ -252,7 +290,12 @@ function HUDAssaultCorner:_end_assault()
 				self:_update_assault_hud_color(self._assault_survived_color)
 		 	end
 
-			self:_set_text_list(self:_get_survived_assault_strings())
+			if not self:_check_snh20_assault_corner_difficulty_names() then
+				self:_set_text_list(self:_get_survived_assault_strings())
+			else
+				self:_set_text_list(self:_get_survived_assault_strings_snh())
+			end
+			
 			text_panel:animate(callback(self, self, "_animate_text"), nil, nil, nil)
 			self._hud_panel:child("assault_panel"):animate(callback(self, self, "_animate_wave_completed"), self)
 	end

@@ -9,7 +9,6 @@ function HUDAssaultCorner:show_point_of_no_return_timer()
 	self._point_of_no_return = true
 end
 
-
 function HUDAssaultCorner:_get_survived_assault_strings()
 	if WaveSurvived.options["WaveSurvived_customtext"] then
 		if managers.job:current_difficulty_stars() > 0 then
@@ -60,6 +59,41 @@ function HUDAssaultCorner:_get_survived_assault_strings()
 	end
 end
 
+function HUDAssaultCorner:_check_snh20_assault_corner_difficulty_names()
+	if SystemFS:exists("mods/AssaultCornerDifficultyNames/mod.txt") then
+		return true
+	end
+
+	return false
+end
+
+function HUDAssaultCorner:_get_survived_assault_strings_snh()
+	-- Code by Snh20
+	local minskulls = 0
+	local ids_risk = Idstring("risk")
+	local _get_survived_assault_strings_actual = HUDAssaultCorner._get_survived_assault_strings
+
+	local strings = _get_survived_assault_strings_actual(self)
+
+	if strings == nil or #strings < 1 or managers.job:current_difficulty_stars() < minskulls then
+		return strings
+	end
+
+	local difficulty_name_id = tweak_data ~= nil and tweak_data.difficulty_name_id or nil
+	if not difficulty_name_id then
+		return strings
+	end
+
+	for index, data in ipairs(strings) do
+		if type(data) == "userdata" and data == ids_risk then
+			strings[index] = difficulty_name_id
+		end
+	end
+
+	return strings
+end
+
+
 function HUDAssaultCorner:_end_assault()
  	if not self._assault then
  		self._start_assault_after_hostage_offset = nil
@@ -76,7 +110,13 @@ function HUDAssaultCorner:_end_assault()
  	icon_assaultbox:stop()
 
 		self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
-		self:_set_text_list(self:_get_survived_assault_strings())
+		
+		if not self:_check_snh20_assault_corner_difficulty_names() then
+			self:_set_text_list(self:_get_survived_assault_strings())
+		else
+			self:_set_text_list(self:_get_survived_assault_strings_snh())
+		end
+		
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
 		icon_assaultbox:stop()
 		icon_assaultbox:animate(callback(self, self, "_show_icon_assaultbox"))
