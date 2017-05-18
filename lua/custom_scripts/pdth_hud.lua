@@ -36,21 +36,9 @@ if pdth_hud then
 	    	if data_sender then
 				Net:SendToPeers( "WaveSurvived_Net", "endless" )
 			end
-	    	if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
-	    		icon_assaultbox:set_color(Color(255, 255, 0, 0) / 255)
-	    		control_assault_title:set_color(Color(255, 255, 0, 0) / 255)
-		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
-		 		icon_assaultbox:set_color(Color(255, 255, 255, 0) / 255)
-	    		control_assault_title:set_color(Color(255, 255, 255, 0) / 255)
-		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
-		 		icon_assaultbox:set_color(Color(255, 32, 230, 32) / 255)
-	    		control_assault_title:set_color(Color(255, 32, 230, 32) / 255)
-		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
-		 		icon_assaultbox:set_color(Color(255, 0, 255, 255) / 255)
-	    		control_assault_title:set_color(Color(255, 0, 255, 255) / 255)
-		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
-		 		icon_assaultbox:set_color(Color(255, 255, 127, 80) / 255)
-	    		control_assault_title:set_color(Color(255, 255, 127, 80) / 255)
+	    	if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] and WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] ~= 6 then
+		 		icon_assaultbox:set_color(WaveSurvivedTweakData.ew_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor_endless"]])
+	    		control_assault_title:set_color(WaveSurvivedTweakData.ew_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor_endless"]])
 		 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
 		 		icon_assaultbox:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
 	    		control_assault_title:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
@@ -82,21 +70,9 @@ if pdth_hud then
 		control_assault_title:set_font_size(const.assault_font_size - 2)
 		control_assault_title:set_text("SURVIVED")
 
-	    if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
-			control_assault_title:set_color(Color(255, 32, 230, 32) / 255)
-	 		icon_assaultbox:set_color(Color(255, 32, 230, 32) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
-			control_assault_title:set_color(Color(255, 255, 255, 0) / 255)
-	 		icon_assaultbox:set_color(Color(255, 255, 255, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
-			control_assault_title:set_color(Color(255, 255, 0, 0) / 255)
-	 		icon_assaultbox:set_color(Color(255, 255, 0, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
-			control_assault_title:set_color(Color(255, 0, 255, 255) / 255)
-	 		icon_assaultbox:set_color(Color(255, 0, 255, 255) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
-			control_assault_title:set_color(Color(255, 255, 127, 80) / 255)
-	 		icon_assaultbox:set_color(Color(255, 255, 127, 80) / 255)
+	    if WaveSurvived.options["WaveSurvived_custompanelcolor"] and WaveSurvived.options["WaveSurvived_custompanelcolor"] ~= 6 then
+			control_assault_title:set_color(WaveSurvivedTweakData.ws_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor"]])
+	 		icon_assaultbox:set_color(WaveSurvivedTweakData.ws_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor"]])
 	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
 	 		control_assault_title:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
 	 		icon_assaultbox:set_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
@@ -112,24 +88,12 @@ if pdth_hud then
 
 	function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
 		
-		if WaveSurvived.options["WaveSurvived_duration"] == 1 then
-			wait(8.6)
-			local assault_panel = self._hud_panel:child("assault_panel")
-			assault_panel:set_visible(false)
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 2 then
-			wait(15)
-			local assault_panel = self._hud_panel:child("assault_panel")
-			assault_panel:set_visible(false)
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 3 then
-			wait(20)
-			local assault_panel = self._hud_panel:child("assault_panel")
-			assault_panel:set_visible(false)
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 4 then
-			wait(25)
+		if WaveSurvived.options["WaveSurvived_duration"] and WaveSurvived.options["WaveSurvived_duration"] ~= 5 then
+			wait(WaveSurvivedTweakData.duration[WaveSurvived.options["WaveSurvived_duration"]])
 			local assault_panel = self._hud_panel:child("assault_panel")
 			assault_panel:set_visible(false)
 		elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
-
+			return
 		else
 			wait(8.6)
 			local assault_panel = self._hud_panel:child("assault_panel")

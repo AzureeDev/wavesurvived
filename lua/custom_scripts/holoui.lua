@@ -125,23 +125,25 @@ end
 
 function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
 		
-	if WaveSurvived.options["WaveSurvived_duration"] == 1 then
-		wait(8.6)
-		self:_close_assault_box()
-	elseif WaveSurvived.options["WaveSurvived_duration"] == 2 then
-		wait(15)
-		self:_close_assault_box()
-	elseif WaveSurvived.options["WaveSurvived_duration"] == 3 then
-		wait(20)
-		self:_close_assault_box()
-	elseif WaveSurvived.options["WaveSurvived_duration"] == 4 then
-		wait(25)
-		self:_close_assault_box()
-	elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
-
+	if not self:is_safehouse_raid() then
+		if WaveSurvived.options["WaveSurvived_duration"] and WaveSurvived.options["WaveSurvived_duration"] ~= 5 then
+			wait(WaveSurvivedTweakData.duration[WaveSurvived.options["WaveSurvived_duration"]])
+			self:_close_assault_box()
+		elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
+			return
+		else
+			wait(8.6)
+			self:_close_assault_box()
+		end
 	else
-		wait(8.6)
-		self:_close_assault_box()
+		local wave_text = panel:child("num_waves")
+		local bg = panel:child("bg")
+		wait(1.4)
+		wave_text:set_text(self:get_completed_waves_string())
+		bg:stop()
+		bg:animate(callback(nil, _G, "HUDBGBox_animate_bg_attention"), {})
+		wait(7.2)
+		assault_hud:_close_assault_box()
 	end
 
 end

@@ -97,16 +97,8 @@ function HUDAssaultCorner:_update_hud_endless_assault()
 		box_text_panel:animate(callback(self, self, "_animate_text"), nil, nil, callback(self, self, "assault_attention_color_function"))
 		self:_set_feedback_color(nil)
 
-		if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 1 then
-			self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 2 then
-			self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 3 then
-			self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 4 then
-			self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
-	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 5 then
-			self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+		if WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] and WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] ~= 6 then
+			self:_update_assault_hud_color(WaveSurvivedTweakData.ew_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor_endless"]])
 	 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor_endless"] == 6 then
 			self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_endless_customslider_blue"]) / 255)
 	 	else	
@@ -205,6 +197,7 @@ function HUDAssaultCorner:_get_survived_assault_strings_snh()
 end
 
 function HUDAssaultCorner:_start_assault(text_list)
+
 	if managers.groupai:state():get_hunt_mode() and self._assault_mode ~= "phalanx" then
 		self:_update_hud_endless_assault()
 		if data_sender then
@@ -263,16 +256,8 @@ function HUDAssaultCorner:_end_assault()
  	local icon_assaultbox = self._hud_panel:child("assault_panel"):child("icon_assaultbox")
  	icon_assaultbox:stop()
 	
- 	if WaveSurvived.options["WaveSurvived_custompanelcolor"] == 1 then
-		self:_update_assault_hud_color(Color(255, 32, 230, 32) / 255)
- 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 2 then
-		self:_update_assault_hud_color(Color(255, 255, 255, 0) / 255)
- 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 3 then
-		self:_update_assault_hud_color(Color(255, 255, 0, 0) / 255)
- 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 4 then
-		self:_update_assault_hud_color(Color(255, 0, 255, 255) / 255)
- 	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 5 then
-		self:_update_assault_hud_color(Color(255, 255, 127, 80) / 255)
+ 	if WaveSurvived.options["WaveSurvived_custompanelcolor"] and WaveSurvived.options["WaveSurvived_custompanelcolor"] ~= 6 then
+		self:_update_assault_hud_color(WaveSurvivedTweakData.ws_panel_color[WaveSurvived.options["WaveSurvived_custompanelcolor"]])
  	elseif WaveSurvived.options["WaveSurvived_custompanelcolor"] == 6 then
 		self:_update_assault_hud_color(Color(255, WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_red"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_green"], WaveSurvived.options["WaveSurvived_custompanelcolor_customslider_blue"]) / 255)
  	else	
@@ -293,26 +278,15 @@ end
 
 function HUDAssaultCorner:_animate_wave_completed(panel, assault_hud)
 	if not self:is_safehouse_raid() then
-
-		if WaveSurvived.options["WaveSurvived_duration"] == 1 then
-			wait(8.6)
-			self:_close_assault_box()
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 2 then
-			wait(15)
-			self:_close_assault_box()
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 3 then
-			wait(20)
-			self:_close_assault_box()
-		elseif WaveSurvived.options["WaveSurvived_duration"] == 4 then
-			wait(25)
+		if WaveSurvived.options["WaveSurvived_duration"] and WaveSurvived.options["WaveSurvived_duration"] ~= 5 then
+			wait(WaveSurvivedTweakData.duration[WaveSurvived.options["WaveSurvived_duration"]])
 			self:_close_assault_box()
 		elseif WaveSurvived.options["WaveSurvived_duration"] == 5 then
-		
+			return
 		else
 			wait(8.6)
 			self:_close_assault_box()
 		end
-
 	else
 		local wave_text = panel:child("num_waves")
 		local bg = panel:child("bg")
